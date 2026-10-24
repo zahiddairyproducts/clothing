@@ -13,9 +13,9 @@ export function TrustStrip() {
       {items.map(({ icon: Icon, label }) => (
         <li
           key={label}
-          className="flex items-center justify-center gap-[7px] text-center text-[8px] tracking-[.04em] text-[#dfcbd0] uppercase tablet:gap-2.5 tablet:text-[9px] tablet:tracking-[.07em] desktop:text-[10px]"
+          className="flex items-center justify-center gap-[7px] text-center text-[8px] tracking-[.04em] text-muted uppercase tablet:gap-2.5 tablet:text-[9px] tablet:tracking-[.07em] desktop:text-[10px]"
         >
-          <Icon className="text-[15px] text-wine tablet:text-[17px]" />
+          <Icon className="text-[15px] text-accent tablet:text-[17px]" />
           {label}
         </li>
       ))}

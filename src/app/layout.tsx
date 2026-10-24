@@ -11,7 +11,7 @@ import { CartDrawer } from "@/components/shop/CartDrawer";
 import { CartProvider } from "@/components/shop/CartProvider";
 import { ToastProvider } from "@/components/shop/ToastProvider";
 
-const title = `${site.name} — Made to be remembered`;
+const title = `${site.name} — A softer kind of statement`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#100709",
-  colorScheme: "dark",
+  themeColor: "#fffefa",
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -51,7 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <div id="site">
               <a
                 href="#main"
-                className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-wine focus:px-4 focus:py-2 focus:text-white"
+                className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-accent-deep focus:px-4 focus:py-2 focus:text-white"
               >
                 Skip to content
               </a>

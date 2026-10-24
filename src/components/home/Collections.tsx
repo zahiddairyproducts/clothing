@@ -20,7 +20,7 @@ export function Collections() {
             key={c.slug}
             href={c.href}
             className={cx(
-              "group relative block overflow-hidden border border-[rgba(186,82,106,.18)] bg-paper-2",
+              "group relative block overflow-hidden border border-line bg-paper-2",
               "h-[280px] tablet:h-[370px] desktop:h-[clamp(300px,39vw,510px)] desktop:min-h-[410px]",
               i === 0 && "col-span-2 h-[390px] tablet:h-[470px] desktop:col-span-1 desktop:h-[clamp(300px,39vw,510px)]",
             )}
@@ -33,8 +33,8 @@ export function Collections() {
               sizes={i === 0 ? "(min-width: 851px) 36vw, 100vw" : "(min-width: 851px) 32vw, 50vw"}
               className="object-cover transition-transform duration-700 ease-[cubic-bezier(.2,.65,.3,1)] group-hover:scale-[1.045]"
             />
-            <div aria-hidden="true" className="absolute inset-x-0 top-[35%] bottom-0 bg-gradient-to-b from-transparent to-[rgba(24,17,15,.62)]" />
-            <div className="absolute bottom-4 left-3.5 z-[1] text-white tablet:bottom-6 tablet:left-[25px]">
+            <div aria-hidden="true" className="absolute inset-x-0 top-[35%] bottom-0 bg-gradient-to-b from-transparent to-[rgba(73,68,59,.18)]" />
+            <div className="absolute bottom-4 left-3.5 z-[1] text-white [text-shadow:0_1px_8px_rgba(0,0,0,.25)] tablet:bottom-6 tablet:left-[25px]">
               <small className="text-[8px] tracking-[.18em] uppercase tablet:text-[9px]">{c.tagline}</small>
               <h3 className="mt-[7px] mb-3 font-serif text-[24px] leading-normal font-medium tablet:text-[clamp(24px,3vw,35px)]">
                 {c.title}

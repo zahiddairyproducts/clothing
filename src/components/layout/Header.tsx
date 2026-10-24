@@ -8,7 +8,7 @@ import { SearchDialog } from "@/components/shop/SearchDialog";
 import { BagIcon, CloseIcon, MenuIcon, SearchIcon } from "@/components/ui/icons";
 
 const navLinkClass =
-  "relative text-[11px] uppercase tracking-[.11em] after:absolute after:-bottom-[5px] after:left-0 after:h-px after:w-0 after:bg-wine after:transition-[width] after:duration-[250ms] hover:after:w-full";
+  "relative text-[11px] uppercase tracking-[.11em] after:absolute after:-bottom-[5px] after:left-0 after:h-px after:w-0 after:bg-accent after:transition-[width] after:duration-[250ms] hover:after:w-full";
 
 export function Header() {
   const { count, open: openCart } = useCart();
@@ -24,7 +24,7 @@ export function Header() {
 
   return (
     <>
-      <header className="grid h-[68px] grid-cols-[40px_1fr_70px] items-center border-b border-line bg-paper px-[13px] backdrop-blur-md tablet:h-[74px] tablet:grid-cols-[1fr_auto_1fr] tablet:px-5 desktop:h-[88px] desktop:px-[clamp(20px,5vw,76px)]">
+      <header className="grid h-[68px] grid-cols-[40px_1fr_70px] items-center border-b border-line bg-paper/97 px-[13px] backdrop-blur-md tablet:h-[74px] tablet:grid-cols-[1fr_auto_1fr] tablet:px-5 desktop:h-[88px] desktop:px-[clamp(20px,5vw,76px)]">
         <button
           type="button"
           className="justify-self-start p-1.5 text-[19px] tablet:hidden"
@@ -49,10 +49,10 @@ export function Header() {
         </nav>
 
         <Link href="/" className="text-center leading-none" aria-label={`${site.name} home`}>
-          <strong className="block font-serif text-[24px] font-semibold tracking-[-.055em] text-[#f7edf0] italic [text-shadow:0_2px_20px_rgba(177,72,96,.22)] tablet:text-[25px] desktop:text-[29px]">
+          <strong className="block font-serif text-[24px] font-semibold tracking-[-.055em] text-ink italic tablet:text-[25px] desktop:text-[29px]">
             {site.name}
           </strong>
-          <span className="mt-[9px] block text-[7px] tracking-[.38em] text-[#d6a8b3] uppercase tablet:text-[8px]">
+          <span className="mt-[9px] block text-[7px] tracking-[.38em] text-muted uppercase tablet:text-[8px]">
             {site.tagline}
           </span>
         </Link>
@@ -73,7 +73,7 @@ export function Header() {
             <BagIcon />
             <span
               aria-hidden="true"
-              className="absolute top-0 -right-[3px] grid size-4 place-items-center rounded-full bg-wine text-[9px] text-white"
+              className="absolute top-0 -right-[3px] grid size-4 place-items-center rounded-full bg-accent text-[9px] text-white"
             >
               {count}
             </span>

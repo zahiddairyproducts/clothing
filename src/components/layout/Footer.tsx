@@ -5,7 +5,7 @@ import { CurrentYear } from "./CurrentYear";
 
 export function Footer() {
   return (
-    <footer className="bg-[#080506] px-[clamp(20px,5vw,72px)] pt-14 pb-6 text-[#f7f0e8]">
+    <footer className="bg-paper-2 px-[clamp(20px,5vw,72px)] pt-14 pb-6 text-ink">
       <div className="grid grid-cols-2 gap-x-[18px] gap-y-[25px] pb-[50px] tablet:gap-[35px] desktop:grid-cols-[1.5fr_1fr_1fr_1fr]">
         <div className="col-span-2 desktop:col-span-1">
           <strong className="font-serif text-[28px] leading-normal font-medium tracking-[-.05em] tablet:text-[31px]">
@@ -22,7 +22,7 @@ export function Footer() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="my-3 flex items-center gap-1 text-[10px] text-muted transition-colors hover:text-white tablet:text-[11px]"
+                className="my-3 flex items-center gap-1 text-[10px] text-muted transition-colors hover:text-accent-deep tablet:text-[11px]"
               >
                 {link.label}
                 {col.title === "Stay connected" && <ArrowUpRightIcon className="text-[1.2em]" />}
@@ -31,7 +31,7 @@ export function Footer() {
           </nav>
         ))}
       </div>
-      <div className="flex flex-col justify-between gap-2 border-t border-line pt-[19px] text-[9px] tracking-[.05em] text-[#b7a79c] tablet:flex-row tablet:gap-[15px]">
+      <div className="flex flex-col justify-between gap-2 border-t border-line-strong pt-[19px] text-[9px] tracking-[.05em] text-muted tablet:flex-row tablet:gap-[15px]">
         <span>
           © <CurrentYear /> {site.name}. Made with feeling.
         </span>

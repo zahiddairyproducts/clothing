@@ -8,11 +8,9 @@ const base =
 
 const variants = {
   primary:
-    "border-wine bg-wine text-white hover:border-wine-deep hover:bg-wine-deep",
-  // The original design set wine text on near-black here (~2:1 contrast, barely readable).
-  // This is the original's own hover look, promoted to the default state.
+    "border-accent bg-accent text-white hover:border-accent-deep hover:bg-accent-deep",
   light:
-    "border-[#f7edf0] bg-[#f7edf0] text-wine-deep hover:border-white hover:bg-white",
+    "border-paper bg-paper text-ink hover:border-accent-deep hover:bg-paper-2",
 } as const;
 
 type Variant = keyof typeof variants;

@@ -17,7 +17,7 @@ export const products: readonly Product[] = [
     image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c",
     alt: "Model wearing a rich burgundy three-piece suit",
     tag: "New arrival",
-    colors: ["#7b343b", "#c9a889", "#d5c6b3"],
+    colors: ["#D9DFD0", "#E5D4B8", "#C8BDA9"],
   },
   {
     id: "the-noor-embroidered-edit",
@@ -26,7 +26,7 @@ export const products: readonly Product[] = [
     image: "https://images.unsplash.com/photo-1583391733956-6c78276477e3",
     alt: "Close-up of embroidered fabric in warm neutral tones",
     tag: "Bestseller",
-    colors: ["#bca18b", "#7c283b", "#e1d5c5"],
+    colors: ["#C8BDA9", "#87947A", "#F1E8D9"],
   },
   {
     id: "meher-printed-lawn-suit",
@@ -35,7 +35,7 @@ export const products: readonly Product[] = [
     image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb",
     alt: "Printed lawn suit styled in warm neutral colours",
     tag: "Easy favourite",
-    colors: ["#b64d55", "#d8b58b", "#65715a"],
+    colors: ["#D9DFD0", "#E5D4B8", "#87947A"],
   },
   {
     id: "ayla-occasion-kaftan",
@@ -44,7 +44,7 @@ export const products: readonly Product[] = [
     image: "https://images.unsplash.com/photo-1597983073493-88cd35cf93b0",
     alt: "Occasion kaftan photographed against natural textures",
     tag: "Limited edit",
-    colors: ["#6a2939", "#c7a777", "#252d2b"],
+    colors: ["#C8BDA9", "#E5D4B8", "#87947A"],
   },
 ];
 
