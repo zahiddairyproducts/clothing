@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens for Rangeen Dhaage.
+ * Breakpoints are the two the original design used (phone < 481px < tablet < 851px < desktop),
+ * written mobile-first: unprefixed = phone, tablet: = 481px+, desktop: = 851px+.
+ */
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-tablet: 481px;
+  --breakpoint-desktop: 851px;
+
+  --color-paper: #100709;
+  --color-paper-2: #1b0b10;
+  --color-ink: #f5edf0;
+  --color-muted: #c3aeb3;
+  --color-wine: #8b3045;
+  --color-wine-deep: #541b2a;
+  --color-rose: #d18b9b;
+  --color-line: #42202a;
+
+  --font-sans: "DM Sans Variable", Arial, sans-serif;
+  --font-serif: "Playfair Display Variable", Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background:
+      radial-gradient(ellipse at 12% 12%, rgba(111, 35, 52, 0.22), transparent 34%),
+      radial-gradient(ellipse at 90% 42%, rgba(101, 26, 43, 0.19), transparent 35%),
+      linear-gradient(145deg, #17080b 0%, #080506 48%, #1b080e 100%);
+    background-attachment: fixed;
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-rose);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-wine);
+    color: #fff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
