@@ -1,5 +1,5 @@
 # Copy to .dev.vars for local development (never commit .dev.vars).
-# In production set these in Cloudflare: Workers & Pages -> rangeen-dhaage -> Settings -> Variables and Secrets
+# In production set these in Cloudflare: Workers & Pages -> clothing -> Settings -> Variables and Secrets
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
 # Any endpoint that accepts a JSON POST: { "email": "...", "source": "website" }
 # (Zapier / Make webhook, Mailchimp / Klaviyo proxy, etc.)
