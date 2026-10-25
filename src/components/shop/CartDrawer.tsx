@@ -40,8 +40,8 @@ export function CartDrawer() {
         aria-hidden="true"
         onClick={close}
         className={cx(
-          "fixed inset-0 z-10 bg-ink/24 transition-opacity duration-[250ms]",
-          isOpen ? "opacity-100" : "pointer-events-none opacity-0",
+          "fixed inset-0 z-10 bg-ink/24 transition-[opacity,visibility] duration-[250ms]",
+          isOpen ? "visible opacity-100" : "pointer-events-none invisible opacity-0",
         )}
       />
       <aside
@@ -50,8 +50,9 @@ export function CartDrawer() {
         aria-label="Shopping bag"
         inert={!isOpen}
         className={cx(
-          "fixed top-0 right-0 z-[11] flex h-dvh w-[min(430px,100%)] flex-col bg-paper p-6 transition-transform duration-300",
-          isOpen ? "translate-x-0" : "translate-x-[102%]",
+          "fixed inset-y-0 right-0 z-[11] flex w-[min(430px,100%)] flex-col bg-paper p-6 transition-[transform,visibility] duration-300",
+          // `visibility` + classic `transform` work in older mobile browsers that lack `translate` / `dvh`
+          isOpen ? "visible [transform:none]" : "invisible [transform:translateX(102%)]",
         )}
       >
         <div className="flex items-center justify-between border-b border-line pb-5">
