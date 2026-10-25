@@ -7,12 +7,12 @@ export function Campaign() {
     <Section className="tablet:pt-2">
       <div className="relative h-[470px] overflow-hidden bg-paper-2 tablet:h-[clamp(350px,43vw,560px)]">
         <Image
-          src="https://images.unsplash.com/photo-1609357605129-26f69add5d6e"
-          alt="Fashion editorial in a soft, sunlit setting"
+          src="/images/campaign"
+          alt="Sapphire and gold jewellery set styled on champagne silk"
           fill
           quality={85}
           sizes="(min-width: 1440px) 1440px, 100vw"
-          className="object-cover object-[58%_center] desktop:object-[center_42%]"
+          className="object-cover object-[72%_center] desktop:object-center"
         />
         <div
           aria-hidden="true"

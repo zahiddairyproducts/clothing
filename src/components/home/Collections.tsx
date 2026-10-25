@@ -31,6 +31,7 @@ export function Collections() {
               fill
               quality={85}
               sizes={i === 0 ? "(min-width: 851px) 36vw, 100vw" : "(min-width: 851px) 32vw, 50vw"}
+              style={{ objectPosition: c.focus }}
               className="object-cover transition-transform duration-700 ease-[cubic-bezier(.2,.65,.3,1)] group-hover:scale-[1.045]"
             />
             <div aria-hidden="true" className="absolute inset-x-0 top-[35%] bottom-0 bg-gradient-to-b from-transparent to-[rgba(73,68,59,.18)]" />

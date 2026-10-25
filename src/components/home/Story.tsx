@@ -8,12 +8,12 @@ export function Story() {
       <div className="grid border border-line bg-[linear-gradient(135deg,var(--color-paper-2),var(--color-paper))] desktop:min-h-[540px] desktop:grid-cols-2">
         <div className="relative h-[360px] overflow-hidden tablet:h-[450px] desktop:h-auto desktop:min-h-[450px]">
           <Image
-            src="https://images.unsplash.com/photo-1597983073493-88cd35cf93b0"
-            alt="Artful fashion portrait with natural textures"
+            src="/images/story"
+            alt="Model in a floral sleeveless kameez in a garden with colourful parrots"
             fill
             quality={85}
             sizes="(min-width: 851px) 50vw, 100vw"
-            className="object-cover"
+            className="object-cover object-[center_8%]"
           />
         </div>
         <div className="flex flex-col items-start justify-center px-7 pt-[45px] pb-[55px] desktop:p-[clamp(32px,6vw,90px)]">

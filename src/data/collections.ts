@@ -6,6 +6,8 @@ export type Collection = {
   image: string;
   alt: string;
   href: string;
+  /** CSS object-position so the subject stays in frame when the card crops the photo. */
+  focus: string;
 };
 
 export const collections: readonly Collection[] = [
@@ -14,26 +16,29 @@ export const collections: readonly Collection[] = [
     title: "Lawn edit",
     tagline: "Easy, expressive, everyday",
     cta: "Shop the edit",
-    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c",
-    alt: "Elegant traditional outfit in rich tones",
+    image: "/images/lawn",
+    alt: "Model in an orange printed lawn suit with a patterned dupatta",
     href: "#new",
+    focus: "32% center",
   },
   {
     slug: "embroidered",
     title: "Embroidered",
     tagline: "Made for the moment",
     cta: "Find your piece",
-    image: "https://images.unsplash.com/photo-1583391733956-6c78276477e3",
-    alt: "Textile and fashion details",
+    image: "/images/embroidered",
+    alt: "Model seated in a burgundy embroidered suit",
     href: "#new",
+    focus: "center top",
   },
   {
-    slug: "kaftans",
-    title: "Kaftans",
+    slug: "jewellery",
+    title: "Jewellery",
     tagline: "Effortless statement",
     cta: "Meet your new favourite",
-    image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb",
-    alt: "Fashion styling in warm neutral colours",
+    image: "/images/jewellery",
+    alt: "Black-and-pearl earrings and cuff styled on cream silk",
     href: "#new",
+    focus: "center",
   },
 ];

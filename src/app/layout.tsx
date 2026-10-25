@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     locale: "en_GB",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&h=630&q=80",
+        url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "Rangeen Dhaage seasonal campaign",
+        alt: "Rangeen Dhaage — model in a blue floral co-ord set",
       },
     ],
   },

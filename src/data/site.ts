@@ -23,7 +23,7 @@ export const footerColumns = [
       { label: "New arrivals", href: "#new" },
       { label: "Lawn edit", href: "#collections" },
       { label: "Embroidered", href: "#collections" },
-      { label: "Kaftans", href: "#collections" },
+      { label: "Jewellery", href: "#collections" },
     ],
   },
   {

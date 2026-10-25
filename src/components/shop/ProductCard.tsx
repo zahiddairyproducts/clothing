@@ -22,7 +22,7 @@ export function ProductCard({ product }: { product: Product }) {
           fill
           quality={85}
           sizes="(min-width: 851px) 22vw, 48vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-[1.035]"
+          className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.035]"
         />
         <span className="absolute top-[7px] left-[7px] bg-paper px-1.5 py-[5px] text-[7px] tracking-[.12em] text-ink uppercase tablet:top-3 tablet:left-3 tablet:px-[9px] tablet:py-1.5 tablet:text-[8px]">
           {product.tag}

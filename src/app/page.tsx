@@ -1,5 +1,6 @@
 import { products } from "@/data/products";
 import { site } from "@/data/site";
+import { imageUrl } from "@/lib/images";
 import { Campaign } from "@/components/home/Campaign";
 import { Collections } from "@/components/home/Collections";
 import { Hero } from "@/components/home/Hero";
@@ -25,7 +26,7 @@ const jsonLd = {
         item: {
           "@type": "Product",
           name: p.name,
-          image: p.image,
+          image: `${site.url}${imageUrl(p.image, 960)}`,
           offers: { "@type": "Offer", price: p.price, priceCurrency: site.currency },
         },
       })),
