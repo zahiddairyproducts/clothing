@@ -23,6 +23,7 @@ export function ProductCard({ product }: { product: Product }) {
           fill
           quality={85}
           sizes="(min-width: 851px) 22vw, 48vw"
+          style={product.focus ? { objectPosition: product.focus } : undefined}
           className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.035]"
         />
         {product.tag && (
