@@ -111,5 +111,105 @@
     240,
     480,
     960
+  ],
+  "navy-plume": [
+    240,
+    480,
+    960
+  ],
+  "black-kurta": [
+    240,
+    480,
+    960
+  ],
+  "charcoal-jacket": [
+    240,
+    480,
+    588
+  ],
+  "pearl-rose-cuffs": [
+    240,
+    480,
+    960
+  ],
+  "mint-turquoise": [
+    240,
+    480,
+    960
+  ],
+  "gemstone-necklace": [
+    240,
+    480,
+    896
+  ],
+  "emerald-baroque": [
+    240,
+    480,
+    960
+  ],
+  "amethyst-baroque": [
+    240,
+    480,
+    853
+  ],
+  "charcoal-jacket-detail": [
+    240,
+    480,
+    588
+  ],
+  "teal-plume": [
+    240,
+    480,
+    960
+  ],
+  "emerald-tiered": [
+    240,
+    480,
+    960
+  ],
+  "navy-enamel": [
+    240,
+    480,
+    960
+  ],
+  "emerald-jewelled": [
+    240,
+    480,
+    960
+  ],
+  "onyx-jhumka": [
+    240,
+    480,
+    960
+  ],
+  "cobalt-kurta": [
+    240,
+    480,
+    960
+  ],
+  "rose-jhumka": [
+    240,
+    480,
+    960
+  ],
+  "champagne-floral": [
+    240,
+    480,
+    960
+  ],
+  "mint-jhumka": [
+    240,
+    480,
+    960
+  ],
+  "amber-pearl-cuffs": [
+    240,
+    480,
+    960
+  ],
+  "ruby-floral": [
+    240,
+    480,
+    960
   ]
 }
