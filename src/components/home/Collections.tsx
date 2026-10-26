@@ -12,7 +12,7 @@ export function Collections() {
         kicker="Find your feeling"
         title="Shop by"
         emphasis="collection."
-        linkHref="#new"
+        linkHref="/shop"
         linkLabel="Explore everything"
       />
       <div className="grid grid-cols-2 gap-[9px] tablet:gap-4 desktop:grid-cols-[1.1fr_1fr_1fr]">

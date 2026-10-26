@@ -30,7 +30,7 @@ export function Campaign() {
           <p className="mb-[25px] max-w-[320px] text-[12px] leading-[1.9] text-ink-soft">
             For slow mornings, long lunches, celebrations, and all the beautiful in-between.
           </p>
-          <ButtonLink href="#new" variant="light">
+          <ButtonLink href="/shop" variant="light">
             Find your next favourite
           </ButtonLink>
         </div>

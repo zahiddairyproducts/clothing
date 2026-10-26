@@ -1,4 +1,4 @@
-import { products } from "@/data/products";
+import { featuredProducts } from "@/data/products";
 import { site } from "@/data/site";
 import { imageUrl } from "@/lib/images";
 import { Campaign } from "@/components/home/Campaign";
@@ -20,7 +20,7 @@ const jsonLd = {
     },
     {
       "@type": "ItemList",
-      itemListElement: products.map((p, i) => ({
+      itemListElement: featuredProducts.map((p, i) => ({
         "@type": "ListItem",
         position: i + 1,
         item: {

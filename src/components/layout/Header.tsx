@@ -58,7 +58,7 @@ export function Header() {
         </Link>
 
         <div className="flex items-center justify-end gap-[9px] tablet:gap-5">
-          <Link href="#new" className={`${navLinkClass} hidden desktop:inline`}>
+          <Link href="/shop" className={`${navLinkClass} hidden desktop:inline`}>
             Shop all
           </Link>
           <button type="button" className="p-1.5 text-[19px]" aria-label="Search" onClick={() => setSearchOpen(true)}>
@@ -88,10 +88,10 @@ export function Header() {
           className="flex flex-col border-b border-line bg-paper px-5 pt-2 pb-[15px] tablet:hidden"
         >
           {[
-            { label: "New arrivals", href: "#new" },
-            { label: "Shop collections", href: "#collections" },
-            { label: "Our story", href: "#story" },
-            { label: "Join our list", href: "#newsletter" },
+            { label: "Shop all", href: "/shop" },
+            { label: "Collections", href: "/#collections" },
+            { label: "Our story", href: "/#story" },
+            { label: "Join our list", href: "/#newsletter" },
           ].map((link) => (
             <Link
               key={link.href}

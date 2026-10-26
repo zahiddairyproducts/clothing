@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+import { categoryLabel } from "@/data/categories";
 import { site } from "@/data/site";
 import { cx } from "@/lib/cx";
 import { formatPrice } from "@/lib/format";
@@ -75,7 +76,7 @@ export function CartDrawer() {
               <br />
               <br />
               <Link
-                href="#new"
+                href="/shop"
                 onClick={close}
                 className="border-b border-maroon pb-[7px] text-[10px] tracking-[.13em] text-ink uppercase"
               >
@@ -91,7 +92,7 @@ export function CartDrawer() {
                   </div>
                   <div>
                     <strong className="block text-[12px] font-medium">{product.name}</strong>
-                    <small className="mt-[5px] block text-[10px] text-muted">Ready to wear</small>
+                    <small className="mt-[5px] block text-[10px] text-muted">{categoryLabel(product.category)}</small>
                     <div className="mt-2.5 flex items-center gap-3">
                       <button
                         type="button"

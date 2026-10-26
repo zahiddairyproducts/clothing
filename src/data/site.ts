@@ -11,36 +11,37 @@ export const site = {
 } as const;
 
 export const navLinks = [
-  { label: "New arrivals", href: "#new" },
-  { label: "Collections", href: "#collections" },
-  { label: "Our story", href: "#story" },
+  { label: "New arrivals", href: "/#new" },
+  { label: "Collections", href: "/#collections" },
+  { label: "Our story", href: "/#story" },
 ] as const;
 
 export const footerColumns = [
   {
     title: "Explore",
     links: [
-      { label: "New arrivals", href: "#new" },
-      { label: "Lawn edit", href: "#collections" },
-      { label: "Embroidered", href: "#collections" },
-      { label: "Jewellery", href: "#collections" },
+      { label: "All products", href: "/shop" },
+      { label: "Lawn edit", href: "/shop?category=lawn" },
+      { label: "Embroidered", href: "/shop?category=embroidered" },
+      { label: "Jewellery", href: "/shop?category=jewellery" },
+      { label: "Menswear", href: "/shop?category=menswear" },
     ],
   },
   {
     title: "Need a hand?",
     links: [
-      { label: "Contact us", href: "#newsletter" },
-      { label: "Delivery & returns", href: "#newsletter" },
-      { label: "Size guide", href: "#newsletter" },
-      { label: "FAQs", href: "#newsletter" },
+      { label: "Contact us", href: "/#newsletter" },
+      { label: "Delivery & returns", href: "/#newsletter" },
+      { label: "Size guide", href: "/#newsletter" },
+      { label: "FAQs", href: "/#newsletter" },
     ],
   },
   {
     title: "Stay connected",
     links: [
-      { label: "Instagram", href: "#newsletter" },
-      { label: "Pinterest", href: "#newsletter" },
-      { label: "Join our mailing list", href: "#newsletter" },
+      { label: "Instagram", href: "/#newsletter" },
+      { label: "Pinterest", href: "/#newsletter" },
+      { label: "Join our mailing list", href: "/#newsletter" },
     ],
   },
 ] as const;

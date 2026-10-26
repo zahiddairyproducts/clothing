@@ -1,5 +1,5 @@
-import { products } from "@/data/products";
-import { ProductCard } from "@/components/shop/ProductCard";
+import { featuredProducts } from "@/data/products";
+import { ProductGrid } from "@/components/shop/ProductGrid";
 import { Section, SectionHead } from "@/components/ui/Section";
 
 export function NewArrivals() {
@@ -9,14 +9,10 @@ export function NewArrivals() {
         kicker="The pieces we're loving"
         title="New &"
         emphasis="noteworthy."
-        linkHref="#collections"
+        linkHref="/shop"
         linkLabel="View all pieces"
       />
-      <div className="grid grid-cols-2 gap-x-3 gap-y-[27px] desktop:grid-cols-4 desktop:gap-[17px]">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+      <ProductGrid products={featuredProducts} />
     </Section>
   );
 }

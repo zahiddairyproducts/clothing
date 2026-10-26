@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { categoryLabel } from "@/data/categories";
 import type { Product } from "@/data/products";
 import { formatPrice, formatPriceShort } from "@/lib/format";
 import { HeartIcon } from "@/components/ui/icons";
@@ -24,9 +25,11 @@ export function ProductCard({ product }: { product: Product }) {
           sizes="(min-width: 851px) 22vw, 48vw"
           className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.035]"
         />
-        <span className="absolute top-[7px] left-[7px] bg-paper px-1.5 py-[5px] text-[7px] tracking-[.12em] text-maroon uppercase tablet:top-3 tablet:left-3 tablet:px-[9px] tablet:py-1.5 tablet:text-[8px]">
-          {product.tag}
-        </span>
+        {product.tag && (
+          <span className="absolute top-[7px] left-[7px] bg-paper px-1.5 py-[5px] text-[7px] tracking-[.12em] text-maroon uppercase tablet:top-3 tablet:left-3 tablet:px-[9px] tablet:py-1.5 tablet:text-[8px]">
+            {product.tag}
+          </span>
+        )}
         <button
           type="button"
           aria-pressed={saved}
@@ -55,13 +58,15 @@ export function ProductCard({ product }: { product: Product }) {
         <h3 className="text-[11px] leading-[1.4] font-normal tablet:text-[12px]">{product.name}</h3>
         <div className="mt-[7px] flex justify-between gap-2 text-[10px] tablet:text-[11px]">
           <span className="font-semibold text-maroon">{formatPrice(product.price)}</span>
-          <span>Ready to wear</span>
+          <span>{categoryLabel(product.category)}</span>
         </div>
-        <ul className="mt-2.5 flex gap-[5px]" aria-label="Available colours">
+        {product.colors && (
+          <ul className="mt-2.5 flex gap-[5px]" aria-label="Available colours">
           {product.colors.map((hex) => (
             <li key={hex} className="size-2.5 rounded-full border border-black/10" style={{ background: hex }} />
           ))}
         </ul>
+        )}
       </div>
     </article>
   );

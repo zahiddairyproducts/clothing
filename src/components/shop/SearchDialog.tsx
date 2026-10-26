@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
+import { categoryLabel } from "@/data/categories";
 import { products } from "@/data/products";
 import { formatPrice } from "@/lib/format";
 import { CloseIcon, SearchIcon } from "@/components/ui/icons";
@@ -23,7 +25,7 @@ export function SearchDialog({ open, onClose }: Props) {
 
   const term = query.trim().toLowerCase();
   const results = useMemo(
-    () => (term ? products.filter((p) => `${p.name} ${p.tag}`.toLowerCase().includes(term)) : []),
+    () => (term ? products.filter((p) => `${p.name} ${categoryLabel(p.category)}`.toLowerCase().includes(term)) : []),
     [term],
   );
 
@@ -49,7 +51,7 @@ export function SearchDialog({ open, onClose }: Props) {
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search lawn, embroidered, kaftan"
+            placeholder="Search lawn, earrings, kurta…"
             aria-label="Search the collection"
             autoComplete="off"
             className="min-w-0 flex-1 bg-transparent py-3.5 text-[13px] text-ink outline-none placeholder:text-muted/70 [&::-webkit-search-cancel-button]:hidden"
@@ -60,30 +62,39 @@ export function SearchDialog({ open, onClose }: Props) {
         </div>
 
         <div aria-live="polite" className="mt-3 min-h-[60px]">
-          {!term && <p className="py-3 text-[12px] text-muted">Try lawn, embroidered or kaftan.</p>}
+          {!term && <p className="py-3 text-[12px] text-muted">Try lawn, embroidered, jewellery or menswear.</p>}
           {term && results.length === 0 && (
             <p className="py-3 text-[12px] text-muted">
-              No pieces match “{query.trim()}”. Try lawn, embroidered or kaftan.
+              No pieces match “{query.trim()}”. Try lawn, embroidered, jewellery or menswear.
             </p>
           )}
           {results.length > 0 && (
-            <ul>
-              {results.map((p) => (
-                <li key={p.id}>
-                  <a
-                    href={`#product-${p.id}`}
-                    onClick={close}
-                    className="flex items-center gap-3.5 border-b border-line py-3 transition-colors hover:bg-paper-2"
-                  >
-                    <span className="relative h-[60px] w-12 shrink-0 overflow-hidden bg-paper-2">
-                      <Image src={p.image} alt="" fill sizes="48px" className="object-cover" />
-                    </span>
-                    <span className="min-w-0 flex-1 text-[12px]">{p.name}</span>
-                    <span className="text-[11px] font-semibold text-maroon">{formatPrice(p.price)}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <>
+              <ul>
+                {results.slice(0, 6).map((p) => (
+                  <li key={p.id}>
+                    <Link
+                      href={`/shop?q=${encodeURIComponent(p.name)}`}
+                      onClick={close}
+                      className="flex items-center gap-3.5 border-b border-line py-3 transition-colors hover:bg-paper-2"
+                    >
+                      <span className="relative h-[60px] w-12 shrink-0 overflow-hidden bg-paper-2">
+                        <Image src={p.image} alt="" fill sizes="48px" className="object-cover object-top" />
+                      </span>
+                      <span className="min-w-0 flex-1 text-[12px]">{p.name}</span>
+                      <span className="text-[11px] font-semibold text-maroon">{formatPrice(p.price)}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href={`/shop?q=${encodeURIComponent(query.trim())}`}
+                onClick={close}
+                className="mt-4 inline-block border-b border-maroon pb-[5px] text-[10px] tracking-[.13em] uppercase"
+              >
+                See all {results.length} {results.length === 1 ? "result" : "results"}
+              </Link>
+            </>
           )}
         </div>
       </div>

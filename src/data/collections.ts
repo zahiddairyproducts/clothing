@@ -18,7 +18,7 @@ export const collections: readonly Collection[] = [
     cta: "Shop the edit",
     image: "/images/lawn",
     alt: "Model in an orange printed lawn suit with a patterned dupatta",
-    href: "#new",
+    href: "/shop?category=lawn",
     focus: "32% center",
   },
   {
@@ -28,7 +28,7 @@ export const collections: readonly Collection[] = [
     cta: "Find your piece",
     image: "/images/embroidered",
     alt: "Model seated in a burgundy embroidered suit",
-    href: "#new",
+    href: "/shop?category=embroidered",
     focus: "center top",
   },
   {
@@ -38,7 +38,7 @@ export const collections: readonly Collection[] = [
     cta: "Meet your new favourite",
     image: "/images/jewellery",
     alt: "Black-and-pearl earrings and cuff styled on cream silk",
-    href: "#new",
+    href: "/shop?category=jewellery",
     focus: "center",
   },
 ];

@@ -43,7 +43,7 @@ export function Hero() {
           <p className="mb-[30px] max-w-[270px] text-[12px] leading-[1.9] text-ink-soft tablet:max-w-[315px] tablet:text-[13px]">
             Colour with a point of view. Thoughtful prints, beautiful details, and pieces that feel like you.
           </p>
-          <ButtonLink href="#new" variant="light">
+          <ButtonLink href="/shop" variant="light">
             Discover the collection
           </ButtonLink>
         </div>
