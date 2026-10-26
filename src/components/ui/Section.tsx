@@ -40,14 +40,14 @@ export function SectionHead({
   return (
     <div className="mb-6 flex items-end justify-between gap-5 tablet:mb-[35px]">
       <div>
-        <div className="text-[10px] font-semibold uppercase tracking-[.2em] text-accent">{kicker}</div>
+        <div className="text-[10px] font-semibold uppercase tracking-[.2em] text-maroon">{kicker}</div>
         <h2 className="mt-2.5 font-serif text-[35px] leading-[1.08] font-medium tracking-[-.04em] tablet:text-[clamp(34px,4vw,52px)]">
-          {title} <em className="font-medium text-accent">{emphasis}</em>
+          {title} <em className="font-medium text-maroon">{emphasis}</em>
         </h2>
       </div>
       <Link
         href={linkHref}
-        className="inline-flex items-center gap-1.5 border-b border-accent pb-[7px] text-[8px] uppercase tracking-[.08em] whitespace-nowrap tablet:text-[10px] tablet:tracking-[.13em]"
+        className="inline-flex items-center gap-1.5 border-b border-maroon pb-[7px] text-[8px] uppercase tracking-[.08em] whitespace-nowrap tablet:text-[10px] tablet:tracking-[.13em]"
       >
         {linkLabel}
         <ArrowUpRightIcon className="text-[1.3em]" />

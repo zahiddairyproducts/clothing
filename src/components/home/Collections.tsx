@@ -3,6 +3,7 @@ import Link from "next/link";
 import { collections } from "@/data/collections";
 import { cx } from "@/lib/cx";
 import { Section, SectionHead } from "@/components/ui/Section";
+import { Stitch } from "@/components/ui/Stitch";
 
 export function Collections() {
   return (
@@ -20,7 +21,7 @@ export function Collections() {
             key={c.slug}
             href={c.href}
             className={cx(
-              "group relative block overflow-hidden border border-line bg-paper-2",
+              "group relative block overflow-hidden border border-maroon/25 bg-paper-2",
               "h-[280px] tablet:h-[370px] desktop:h-[clamp(300px,39vw,510px)] desktop:min-h-[410px]",
               i === 0 && "col-span-2 h-[390px] tablet:h-[470px] desktop:col-span-1 desktop:h-[clamp(300px,39vw,510px)]",
             )}
@@ -34,6 +35,7 @@ export function Collections() {
               style={{ objectPosition: c.focus }}
               className="object-cover transition-transform duration-700 ease-[cubic-bezier(.2,.65,.3,1)] group-hover:scale-[1.045]"
             />
+            <Stitch tone="ivory" className="inset-2.5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100" />
             <div aria-hidden="true" className="absolute inset-x-0 top-[35%] bottom-0 bg-gradient-to-b from-transparent to-[rgba(73,68,59,.18)]" />
             <div className="absolute bottom-4 left-3.5 z-[1] text-white [text-shadow:0_1px_8px_rgba(0,0,0,.25)] tablet:bottom-6 tablet:left-[25px]">
               <small className="text-[8px] tracking-[.18em] uppercase tablet:text-[9px]">{c.tagline}</small>

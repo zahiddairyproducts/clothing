@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ButtonLink } from "@/components/ui/Button";
+import { Stitch } from "@/components/ui/Stitch";
 
 export function Hero() {
   return (
@@ -7,7 +8,7 @@ export function Hero() {
       aria-label="Seasonal campaign"
       className="mx-auto max-w-[1440px] px-2 pt-2 tablet:px-3 tablet:pt-3 desktop:px-[clamp(14px,3vw,42px)] desktop:pt-[22px]"
     >
-      <div className="relative h-[640px] overflow-hidden border border-line bg-paper-2 tablet:h-[660px] desktop:h-[clamp(480px,56vw,680px)] desktop:min-h-[min(660px,67vw)]">
+      <div className="relative h-[640px] overflow-hidden border border-maroon/30 bg-paper-2 tablet:h-[660px] desktop:h-[clamp(480px,56vw,680px)] desktop:min-h-[min(660px,67vw)]">
         {/* Desktop: photo fills the right 72% and fades into the champagne frame, so the headline sits on open space */}
         <div className="absolute inset-0 desktop:left-auto desktop:w-[72%] desktop:[mask-image:linear-gradient(to_right,transparent,#000_32%)]">
           <Image
@@ -20,6 +21,7 @@ export function Hero() {
             className="object-cover object-[52%_top] desktop:object-[center_top]"
           />
         </div>
+        <Stitch className="inset-2.5 tablet:inset-3.5" />
         {/* Left-to-right scrim keeps the headline legible */}
         <div
           aria-hidden="true"
@@ -32,11 +34,11 @@ export function Hero() {
         />
 
         <div className="absolute right-5 bottom-8 left-[22px] z-[2] text-ink tablet:right-auto tablet:bottom-10 tablet:left-7 tablet:max-w-[400px] desktop:top-1/2 desktop:bottom-auto desktop:left-[clamp(26px,7.5vw,110px)] desktop:max-w-[520px] desktop:-translate-y-[46%]">
-          <div className="text-[10px] font-semibold tracking-[.22em] uppercase">The new season · 01 / 03</div>
+          <div className="text-[10px] font-semibold tracking-[.22em] text-maroon uppercase">The new season · 01 / 03</div>
           <h1 className="my-[17px] font-serif text-[54px] leading-[.99] font-medium tracking-[-.055em] tablet:mt-[23px] tablet:mb-[22px] tablet:text-[clamp(48px,9vw,75px)] desktop:text-[clamp(49px,7vw,94px)]">
             Made to
             <br />
-            be <em className="font-medium">remembered.</em>
+            be <em className="font-medium text-maroon">remembered.</em>
           </h1>
           <p className="mb-[30px] max-w-[270px] text-[12px] leading-[1.9] text-ink-soft tablet:max-w-[315px] tablet:text-[13px]">
             Colour with a point of view. Thoughtful prints, beautiful details, and pieces that feel like you.

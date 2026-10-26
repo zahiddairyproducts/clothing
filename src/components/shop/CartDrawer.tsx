@@ -70,14 +70,14 @@ export function CartDrawer() {
         <div className="flex-1 overflow-auto py-[15px]">
           {lines.length === 0 ? (
             <div className="px-[15px] py-[55px] text-center text-muted">
-              <div className="mb-2.5 font-serif text-[32px] text-accent italic">A little room for colour.</div>
+              <div className="mb-2.5 font-serif text-[32px] text-maroon italic">A little room for colour.</div>
               Your bag is waiting for something lovely.
               <br />
               <br />
               <Link
                 href="#new"
                 onClick={close}
-                className="border-b border-accent pb-[7px] text-[10px] tracking-[.13em] text-ink uppercase"
+                className="border-b border-maroon pb-[7px] text-[10px] tracking-[.13em] text-ink uppercase"
               >
                 Discover the collection
               </Link>

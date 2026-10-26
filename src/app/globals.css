@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /*
- * Design tokens for Rangeen Dhaage (Ivory & Champagne, sage accent).
+ * Design tokens for Rangeen Dhaage (Ivory & Champagne base, maroon "thread" accent, sage as a quiet supporting tone).
  * Breakpoints are the two the original design used (phone < 481px < tablet < 851px < desktop),
  * written mobile-first: unprefixed = phone, tablet: = 481px+, desktop: = 851px+.
  */
@@ -15,6 +15,8 @@
   --color-ink: #49443b;
   --color-ink-soft: #5d574d;
   --color-muted: #777166;
+  --color-maroon: #7b1e3a; /* the "rangeen dhaage" thread colour */
+  --color-maroon-deep: #571228;
   --color-accent: #87947a; /* sage */
   --color-accent-deep: #6f7f63;
   --color-accent-soft: #d9dfd0;
@@ -47,13 +49,13 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-accent-deep);
+    outline: 2px solid var(--color-maroon);
     outline-offset: 3px;
   }
 
   ::selection {
-    background: var(--color-accent-soft);
-    color: var(--color-ink);
+    background: var(--color-maroon);
+    color: #fff;
   }
 }
 

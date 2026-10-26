@@ -40,7 +40,7 @@ export function NewsletterForm() {
     <>
       <form
         onSubmit={onSubmit}
-        className="mx-2 flex max-w-[460px] border-b border-field transition-colors focus-within:border-accent-deep tablet:mx-auto"
+        className="mx-2 flex max-w-[460px] border-b border-field transition-colors focus-within:border-maroon tablet:mx-auto"
       >
         <input
           name="email"
@@ -57,7 +57,7 @@ export function NewsletterForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="inline-flex items-center gap-1.5 px-[5px] text-[10px] tracking-[.15em] text-accent-deep uppercase disabled:opacity-60"
+          className="inline-flex items-center gap-1.5 px-[5px] text-[10px] tracking-[.15em] text-maroon uppercase disabled:opacity-60"
         >
           {status === "loading" ? "Joining…" : "Join us"}
           <ArrowUpRightIcon className="text-[1.3em]" />
@@ -67,7 +67,7 @@ export function NewsletterForm() {
         id={noteId}
         role="status"
         aria-live="polite"
-        className={`mt-3 min-h-[15px] text-[10px] ${status === "error" ? "text-error" : "text-accent-deep"}`}
+        className={`mt-3 min-h-[15px] text-[10px] ${status === "error" ? "text-error" : "text-maroon"}`}
       >
         {note}
       </div>

@@ -36,7 +36,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
         role="status"
         aria-live="polite"
         className={cx(
-          "pointer-events-none fixed bottom-[22px] left-1/2 z-30 bg-accent-deep px-5 py-3 text-[11px] tracking-[.04em] text-white shadow-[0_8px_24px_rgba(0,0,0,.2)] transition-[opacity,transform] duration-[250ms]",
+          "pointer-events-none fixed bottom-[22px] left-1/2 z-30 bg-maroon px-5 py-3 text-[11px] tracking-[.04em] text-white shadow-[0_8px_24px_rgba(0,0,0,.2)] transition-[opacity,transform] duration-[250ms]",
           visible ? "[transform:translate(-50%,0)] opacity-100" : "[transform:translate(-50%,20px)] opacity-0",
         )}
       >

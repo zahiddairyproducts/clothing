@@ -8,9 +8,9 @@ const base =
 
 const variants = {
   primary:
-    "border-accent bg-accent text-white hover:border-accent-deep hover:bg-accent-deep",
+    "border-maroon bg-maroon text-white hover:border-maroon-deep hover:bg-maroon-deep",
   light:
-    "border-paper bg-paper text-ink hover:border-accent-deep hover:bg-paper-2",
+    "border-paper bg-paper text-maroon hover:border-maroon hover:bg-maroon hover:text-paper",
 } as const;
 
 type Variant = keyof typeof variants;
