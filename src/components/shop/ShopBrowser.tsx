@@ -1,12 +1,14 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { categories, categoryLabel, isCategory, type CategorySlug } from "@/data/categories";
 import { products } from "@/data/products";
 import { cx } from "@/lib/cx";
 import { Button } from "@/components/ui/Button";
 import { ProductGrid } from "./ProductGrid";
+
+const PAGE_SIZE = 24;
 
 const sorts = [
   { value: "featured", label: "Featured" },
@@ -76,6 +78,14 @@ export function ShopBrowser() {
     return filtered;
   }, [searched, category, sort]);
 
+  // Show 24 at a time; the count resets whenever the filters change.
+  const filterKey = `${category}|${sort}|${term}`;
+  const [shown, setShown] = useState({ key: filterKey, count: PAGE_SIZE });
+  if (shown.key !== filterKey) setShown({ key: filterKey, count: PAGE_SIZE }); // reset when filters change
+  const visibleCount = shown.key === filterKey ? shown.count : PAGE_SIZE;
+  const visible = items.slice(0, visibleCount);
+  const remaining = items.length - visible.length;
+
   function update(next: { category?: string; sort?: string; q?: string }) {
     const sp = new URLSearchParams(params.toString());
     for (const [key, value] of Object.entries(next)) {
@@ -144,7 +154,24 @@ export function ShopBrowser() {
       </p>
 
       {items.length > 0 ? (
-        <ProductGrid products={items} />
+        <>
+          <ProductGrid products={visible} />
+          {remaining > 0 && (
+            <div className="mt-12 flex flex-col items-center gap-3 border-t border-dashed border-maroon/40 pt-10">
+              <p className="text-[11px] text-muted">
+                Showing {visible.length} of {items.length}
+              </p>
+              <Button
+                variant="light"
+                className="border-maroon/50"
+                arrow={false}
+                onClick={() => setShown({ key: filterKey, count: visibleCount + PAGE_SIZE })}
+              >
+                Show {Math.min(PAGE_SIZE, remaining)} more
+              </Button>
+            </div>
+          )}
+        </>
       ) : (
         <div className="border border-dashed border-maroon/40 px-6 py-16 text-center">
           <p className="font-serif text-[28px] text-maroon italic">Nothing here just yet.</p>

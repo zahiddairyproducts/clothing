@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Photo } from "@/components/ui/Photo";
 import Link from "next/link";
 import { collections } from "@/data/collections";
 import { cx } from "@/lib/cx";
@@ -26,7 +26,7 @@ export function Collections() {
               i === 0 && "col-span-2 h-[390px] tablet:h-[470px] desktop:col-span-1 desktop:h-[clamp(300px,39vw,510px)]",
             )}
           >
-            <Image
+            <Photo
               src={c.image}
               alt={c.alt}
               fill

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { Photo } from "@/components/ui/Photo";
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
 import { categoryLabel } from "@/data/categories";
@@ -79,7 +79,7 @@ export function SearchDialog({ open, onClose }: Props) {
                       className="flex items-center gap-3.5 border-b border-line py-3 transition-colors hover:bg-paper-2"
                     >
                       <span className="relative h-[60px] w-12 shrink-0 overflow-hidden bg-paper-2">
-                        <Image src={p.image} alt="" fill sizes="48px" className="object-cover object-top" />
+                        <Photo src={p.image} alt="" fill sizes="48px" className="object-cover object-top" />
                       </span>
                       <span className="min-w-0 flex-1 text-[12px]">{p.name}</span>
                       <span className="text-[11px] font-semibold text-maroon">{formatPrice(p.price)}</span>

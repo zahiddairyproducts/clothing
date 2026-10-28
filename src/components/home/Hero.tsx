@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Photo } from "@/components/ui/Photo";
 import { ButtonLink } from "@/components/ui/Button";
 import { Stitch } from "@/components/ui/Stitch";
 
@@ -11,7 +11,7 @@ export function Hero() {
       <div className="relative h-[640px] overflow-hidden border border-maroon/30 bg-paper-2 tablet:h-[660px] desktop:h-[clamp(480px,56vw,680px)] desktop:min-h-[min(660px,67vw)]">
         {/* Desktop: photo fills the right 72% and fades into the champagne frame, so the headline sits on open space */}
         <div className="absolute inset-0 desktop:left-auto desktop:w-[72%] desktop:[mask-image:linear-gradient(to_right,transparent,#000_32%)]">
-          <Image
+          <Photo
             src="/images/hero"
             alt="Model in a blue floral co-ord set in a warm, plant-filled room"
             fill

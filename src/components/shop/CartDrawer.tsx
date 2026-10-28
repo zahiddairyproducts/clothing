@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { Photo } from "@/components/ui/Photo";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { categoryLabel } from "@/data/categories";
@@ -88,7 +88,7 @@ export function CartDrawer() {
               {lines.map(({ product, qty }) => (
                 <li key={product.id} className="grid grid-cols-[75px_1fr_auto] gap-[13px] border-b border-line py-[13px]">
                   <div className="relative h-[95px] overflow-hidden bg-paper-2">
-                    <Image src={product.image} alt="" fill sizes="75px" className="object-cover" />
+                    <Photo src={product.image} alt="" fill sizes="75px" className="object-cover" />
                   </div>
                   <div>
                     <strong className="block text-[12px] font-medium">{product.name}</strong>

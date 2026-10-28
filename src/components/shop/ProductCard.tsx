@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { Photo } from "@/components/ui/Photo";
 import { useState } from "react";
 import { categoryLabel } from "@/data/categories";
 import type { Product } from "@/data/products";
@@ -17,7 +17,7 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <article id={`product-${product.id}`} className="group min-w-0 scroll-mt-24">
       <div className="relative aspect-[.73] overflow-hidden border border-line bg-paper-2">
-        <Image
+        <Photo
           src={product.image}
           alt={product.alt}
           fill

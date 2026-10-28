@@ -46,7 +46,7 @@ export default function ShopPage() {
         <Suspense
           fallback={
             <div className="mt-10">
-              <ProductGrid products={products} />
+              <ProductGrid products={products.slice(0, 24)} />
             </div>
           }
         >

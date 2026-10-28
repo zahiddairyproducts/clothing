@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Photo } from "@/components/ui/Photo";
 import { ButtonLink } from "@/components/ui/Button";
 import { Section } from "@/components/ui/Section";
 import { Stitch } from "@/components/ui/Stitch";
@@ -7,7 +7,7 @@ export function Campaign() {
   return (
     <Section className="tablet:pt-2">
       <div className="relative h-[470px] overflow-hidden bg-paper-2 tablet:h-[clamp(350px,43vw,560px)]">
-        <Image
+        <Photo
           src="/images/campaign"
           alt="Sapphire and gold jewellery set styled on champagne silk"
           fill

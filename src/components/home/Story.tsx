@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Photo } from "@/components/ui/Photo";
 import { ButtonLink } from "@/components/ui/Button";
 import { Section } from "@/components/ui/Section";
 import { Stitch } from "@/components/ui/Stitch";
@@ -9,7 +9,7 @@ export function Story() {
       <div className="relative grid border border-maroon/30 bg-[linear-gradient(135deg,var(--color-paper-2),var(--color-paper))] desktop:min-h-[540px] desktop:grid-cols-2">
         <Stitch className="inset-2.5 tablet:inset-3.5" />
         <div className="relative h-[360px] overflow-hidden tablet:h-[450px] desktop:h-auto desktop:min-h-[450px]">
-          <Image
+          <Photo
             src="/images/story"
             alt="Model in a floral sleeveless kameez in a garden with colourful parrots"
             fill
