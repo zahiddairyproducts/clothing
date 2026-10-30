@@ -9,11 +9,13 @@ type PageShellProps = {
   emphasis: string;
   intro?: string;
   crumb: string;
+  /** Use the full page width instead of the readable text column. */
+  wide?: boolean;
   children: ReactNode;
 };
 
 /** Shared frame for the information pages: breadcrumb, serif heading, readable column. */
-export function PageShell({ kicker, title, emphasis, intro, crumb, children }: PageShellProps) {
+export function PageShell({ kicker, title, emphasis, intro, crumb, wide, children }: PageShellProps) {
   return (
     <main id="main">
       <Section className="pt-8 pb-[60px] tablet:pt-10 tablet:pb-[clamp(64px,8vw,112px)]">
@@ -41,7 +43,7 @@ export function PageShell({ kicker, title, emphasis, intro, crumb, children }: P
 
         <div aria-hidden="true" className="mt-8 border-t border-dashed border-maroon/40" />
 
-        <div className="mt-10 max-w-[760px]">{children}</div>
+        <div className={wide ? "mt-10" : "mt-10 max-w-[760px]"}>{children}</div>
       </Section>
     </main>
   );

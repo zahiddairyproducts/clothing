@@ -104,6 +104,9 @@ export const cartStore = {
     if (qty < 1) return cartStore.remove(key);
     commit({ ...state, [key]: Math.min(Math.floor(qty), MAX_QTY) });
   },
+  clear() {
+    if (state !== EMPTY) commit(EMPTY);
+  },
   remove(key: string) {
     if (!(key in state)) return;
     const { [key]: _removed, ...rest } = state;

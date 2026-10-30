@@ -5,6 +5,8 @@ export const site = {
     "Discover considered colour, beautiful prints and everyday occasionwear at Rangeen Dhaage.",
   announcement: "Complimentary UK delivery on orders over £100",
   freeDeliveryThreshold: 100,
+  /** TODO: confirm your real UK delivery charge for orders under the free-delivery threshold. */
+  deliveryFee: 4.95,
   locale: "en-GB",
   currency: "GBP",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",

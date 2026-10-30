@@ -7,14 +7,12 @@ import { categoryLabel } from "@/data/categories";
 import { site } from "@/data/site";
 import { cx } from "@/lib/cx";
 import { formatPrice } from "@/lib/format";
-import { Button } from "@/components/ui/Button";
+import { ButtonLink } from "@/components/ui/Button";
 import { CloseIcon } from "@/components/ui/icons";
 import { useCart } from "./CartProvider";
-import { useToast } from "./ToastProvider";
 
 export function CartDrawer() {
   const { lines, count, subtotal, setQty, remove, isOpen, close } = useCart();
-  const { toast } = useToast();
   const closeButton = useRef<HTMLButtonElement>(null);
 
   // While open: lock page scroll, hide the page from keyboard/AT, close on Esc, restore focus after.
@@ -143,13 +141,16 @@ export function CartDrawer() {
               Delivery and any applicable taxes are calculated at checkout. Complimentary UK delivery on orders over £
               {site.freeDeliveryThreshold}.
             </p>
-            {/*
-              TODO(checkout): replace with a real payment flow (e.g. Stripe Checkout session created by a
-              route handler). Until then the button is honest about not taking orders.
-            */}
-            <Button className="w-full" onClick={() => toast("Checkout isn't switched on yet.")}>
+            <ButtonLink href="/checkout" onClick={close} className="w-full">
               Continue to checkout
-            </Button>
+            </ButtonLink>
+            <Link
+              href="/cart"
+              onClick={close}
+              className="mt-3 block text-center text-[10px] tracking-[.13em] text-muted uppercase underline"
+            >
+              View full bag
+            </Link>
           </div>
         )}
       </aside>

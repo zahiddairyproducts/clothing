@@ -19,6 +19,7 @@ Workers & Pages → Create → Import a repository → this repo, then:
 | Build command | `npx opennextjs-cloudflare build` |
 | Deploy command | `npx wrangler deploy` |
 | Variable | `NEXT_PUBLIC_SITE_URL` = `https://your-domain` (set at **build** time) |
+| Secret (runtime) | `STRIPE_SECRET_KEY` = your Stripe secret key |
 | Variable (runtime) | `NEWSLETTER_WEBHOOK_URL` = endpoint receiving `{ email, source, subscribedAt }` |
 
 Manual deploy: `npm run deploy` (after `npx wrangler login`).
@@ -32,7 +33,7 @@ Then attach your domain under the Worker's Settings → Domains & Routes.
 - `src/lib/image-loader.ts` – serves those files; swap for Cloudflare Images / R2 if the catalogue grows
 
 ## Before going live
-1. **Checkout is not connected** (`CartDrawer.tsx`, marked `TODO(checkout)`). Add Stripe Checkout or similar.
+1. **Checkout** (`/cart`, `/checkout`, `src/app/api/checkout/route.ts`) hands payment to Stripe Checkout. Set the `STRIPE_SECRET_KEY` secret (use a `sk_test_` key first). Orders appear in the Stripe dashboard; there is no order database or confirmation webhook yet. Confirm `deliveryFee` in `src/data/site.ts`.
 2. **Newsletter** returns 503 until `NEWSLETTER_WEBHOOK_URL` is set.
 3. Product names and prices are sample data (the photos are your own).
 4. Footer help links (Contact, Delivery & returns, Size guide, FAQs, Privacy, Terms) are placeholders and need real pages.

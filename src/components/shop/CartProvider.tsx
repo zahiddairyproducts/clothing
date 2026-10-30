@@ -13,6 +13,7 @@ type CartContextValue = {
   add: (productId: string, variantId: string, size?: string) => void;
   setQty: (key: string, qty: number) => void;
   remove: (key: string) => void;
+  clear: () => void;
   isOpen: boolean;
   open: () => void;
   close: () => void;
@@ -55,6 +56,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       add: cartStore.add,
       setQty: cartStore.setQty,
       remove: cartStore.remove,
+      clear: cartStore.clear,
       isOpen,
       open,
       close,
