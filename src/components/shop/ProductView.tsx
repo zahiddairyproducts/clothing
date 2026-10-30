@@ -8,13 +8,17 @@ import { site } from "@/data/site";
 import { cx } from "@/lib/cx";
 import { formatPrice } from "@/lib/format";
 import { Button } from "@/components/ui/Button";
+import { HeartIcon } from "@/components/ui/icons";
 import { useCart } from "./CartProvider";
 import { ProductGallery } from "./ProductGallery";
 import { useToast } from "./ToastProvider";
+import { useWishlist } from "./useWishlist";
 
 export function ProductView({ product }: { product: Product }) {
   const { add, open } = useCart();
   const { toast } = useToast();
+  const wishlist = useWishlist();
+  const saved = wishlist.has(product.id);
   const [variantId, setVariantId] = useState(product.variants[0].id);
   const [size, setSize] = useState<string | undefined>();
   const [error, setError] = useState("");
@@ -111,6 +115,15 @@ export function ProductView({ product }: { product: Product }) {
           <Button className="w-full" onClick={addToBag} arrow={false}>
             Add to bag — {formatPrice(product.price)}
           </Button>
+          <button
+            type="button"
+            aria-pressed={saved}
+            onClick={() => wishlist.toggle(product.id, product.name)}
+            className="mt-3 flex w-full items-center justify-center gap-2 border border-maroon/40 py-3 text-[10px] tracking-[.15em] text-maroon uppercase transition-colors hover:bg-maroon hover:text-paper"
+          >
+            <HeartIcon filled={saved} className="text-[16px]" />
+            {saved ? "Saved to wish list" : "Save to wish list"}
+          </button>
           <p role="alert" className="mt-2 min-h-[18px] text-[11px] text-error">
             {error}
           </p>

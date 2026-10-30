@@ -5,13 +5,15 @@ import { useEffect, useState } from "react";
 import { navLinks, site } from "@/data/site";
 import { useCart } from "@/components/shop/CartProvider";
 import { SearchDialog } from "@/components/shop/SearchDialog";
-import { BagIcon, CloseIcon, MenuIcon, SearchIcon } from "@/components/ui/icons";
+import { useWishlist } from "@/components/shop/useWishlist";
+import { BagIcon, CloseIcon, HeartIcon, MenuIcon, SearchIcon } from "@/components/ui/icons";
 
 const navLinkClass =
   "relative text-[11px] uppercase tracking-[.11em] after:absolute after:-bottom-[5px] after:left-0 after:h-px after:w-0 after:bg-maroon after:transition-[width] after:duration-[250ms] hover:after:w-full";
 
 export function Header() {
   const { count, open: openCart } = useCart();
+  const wishlist = useWishlist();
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
 
@@ -24,7 +26,7 @@ export function Header() {
 
   return (
     <>
-      <header className="grid h-[68px] grid-cols-[40px_1fr_70px] items-center border-b border-dashed border-maroon/40 bg-paper/97 px-[13px] backdrop-blur-md tablet:h-[74px] tablet:grid-cols-[1fr_auto_1fr] tablet:px-5 desktop:h-[88px] desktop:px-[clamp(20px,5vw,76px)]">
+      <header className="grid h-[68px] grid-cols-[40px_1fr_100px] items-center border-b border-dashed border-maroon/40 bg-paper/97 px-[13px] backdrop-blur-md tablet:h-[74px] tablet:grid-cols-[1fr_auto_1fr] tablet:px-5 desktop:h-[88px] desktop:px-[clamp(20px,5vw,76px)]">
         <button
           type="button"
           className="justify-self-start p-1.5 text-[19px] tablet:hidden"
@@ -64,6 +66,21 @@ export function Header() {
           <button type="button" className="p-1.5 text-[19px]" aria-label="Search" onClick={() => setSearchOpen(true)}>
             <SearchIcon />
           </button>
+          <Link
+            href="/wishlist"
+            className="relative p-1.5 text-[19px]"
+            aria-label={`Wish list, ${wishlist.count} ${wishlist.count === 1 ? "item" : "items"}`}
+          >
+            <HeartIcon filled={wishlist.count > 0} />
+            {wishlist.count > 0 && (
+              <span
+                aria-hidden="true"
+                className="absolute top-0 -right-[3px] grid size-4 place-items-center rounded-full bg-maroon text-[9px] text-white"
+              >
+                {wishlist.count}
+              </span>
+            )}
+          </Link>
           <button
             type="button"
             className="relative p-1.5 text-[19px]"
@@ -90,7 +107,8 @@ export function Header() {
           {[
             { label: "Shop all", href: "/shop" },
             { label: "Collections", href: "/#collections" },
-            { label: "Our story", href: "/#story" },
+            { label: "Our story", href: "/about" },
+            { label: "Wish list", href: "/wishlist" },
             { label: "Join our list", href: "/#newsletter" },
           ].map((link) => (
             <Link

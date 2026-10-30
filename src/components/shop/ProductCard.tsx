@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import { categoryLabel } from "@/data/categories";
 import { needsOptions, primaryPhoto, type Product } from "@/data/products";
 import { formatPrice, formatPriceShort } from "@/lib/format";
@@ -9,6 +8,7 @@ import { Photo } from "@/components/ui/Photo";
 import { HeartIcon } from "@/components/ui/icons";
 import { useCart } from "./CartProvider";
 import { useToast } from "./ToastProvider";
+import { useWishlist } from "./useWishlist";
 
 const quickClass =
   "absolute inset-x-1.5 bottom-2.5 z-10 grid h-9 place-items-center border border-maroon/40 bg-paper/97 text-[8px] tracking-[.15em] text-maroon uppercase transition-[transform,background-color,color] duration-[250ms] hover:bg-maroon hover:text-paper tablet:inset-x-2.5 tablet:text-[9px] desktop:h-[41px] desktop:translate-y-[60px] desktop:group-focus-within:translate-y-0 desktop:group-hover:translate-y-0";
@@ -16,7 +16,8 @@ const quickClass =
 export function ProductCard({ product }: { product: Product }) {
   const { add } = useCart();
   const { toast } = useToast();
-  const [saved, setSaved] = useState(false);
+  const wishlist = useWishlist();
+  const saved = wishlist.has(product.id);
   const photo = primaryPhoto(product);
   const href = `/products/${product.id}`;
   const options = needsOptions(product);
@@ -44,11 +45,8 @@ export function ProductCard({ product }: { product: Product }) {
         <button
           type="button"
           aria-pressed={saved}
-          aria-label={`Save ${product.name}`}
-          onClick={() => {
-            setSaved((v) => !v);
-            toast(saved ? "Removed from saved pieces" : "Added to your saved pieces");
-          }}
+          aria-label={saved ? `Remove ${product.name} from wish list` : `Save ${product.name} to wish list`}
+          onClick={() => wishlist.toggle(product.id, product.name)}
           className={`absolute top-1.5 right-1.5 z-10 grid size-7 place-items-center rounded-full bg-paper/96 text-[18px] tablet:top-2.5 tablet:right-2.5 tablet:size-8 ${saved ? "text-maroon-deep" : "text-maroon"}`}
         >
           <HeartIcon filled={saved} />
