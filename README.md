@@ -25,7 +25,7 @@ Manual deploy: `npm run deploy` (after `npx wrangler login`).
 Then attach your domain under the Worker's Settings → Domains & Routes.
 
 ## Structure
-- `src/data/` – products, collections, site copy (edit content here)
+- `src/data/` – products (each with colour variants, photo galleries and sizes), collections, site copy (edit content here)
 - `src/components/home/` – page sections · `layout/` – header/footer · `shop/` – cart, search, forms
 - `src/app/api/subscribe/route.ts` – newsletter endpoint
 - `public/images/` – your photos, pre-resized to WebP (`<name>-<width>.webp`); `src/data/image-manifest.json` lists the widths available per photo
@@ -40,4 +40,5 @@ Then attach your domain under the Worker's Settings → Domains & Routes.
 ## Adding or replacing a photo
 1. Export WebP at roughly 240, 480, 960 and 1440 px wide (plus the original width if smaller), named `<name>-<width>.webp`, into `public/images/`.
 2. Add `"<name>": [240, 480, 960, 1440]` to `src/data/image-manifest.json` (the widths you exported).
-3. Reference it as `/images/<name>` in `src/data/products.ts` / `collections.ts`.
+3. Reference it as `/images/<name>` in `src/data/products.ts` / `collections.ts`, as a photo inside a product's `variants`.
+4. Every product gets its own page at `/products/<id>` automatically.

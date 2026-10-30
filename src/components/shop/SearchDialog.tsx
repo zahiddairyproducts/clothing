@@ -4,7 +4,7 @@ import { Photo } from "@/components/ui/Photo";
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
 import { categoryLabel } from "@/data/categories";
-import { products } from "@/data/products";
+import { primaryPhoto, products } from "@/data/products";
 import { formatPrice } from "@/lib/format";
 import { CloseIcon, SearchIcon } from "@/components/ui/icons";
 import { useEffect } from "react";
@@ -25,7 +25,9 @@ export function SearchDialog({ open, onClose }: Props) {
 
   const term = query.trim().toLowerCase();
   const results = useMemo(
-    () => (term ? products.filter((p) => `${p.name} ${categoryLabel(p.category)}`.toLowerCase().includes(term)) : []),
+    () => (term ? products.filter((p) =>
+            `${p.name} ${categoryLabel(p.category)} ${p.variants.map((v) => v.label).join(" ")}`.toLowerCase().includes(term),
+          ) : []),
     [term],
   );
 
@@ -74,12 +76,12 @@ export function SearchDialog({ open, onClose }: Props) {
                 {results.slice(0, 6).map((p) => (
                   <li key={p.id}>
                     <Link
-                      href={`/shop?q=${encodeURIComponent(p.name)}`}
+                      href={`/products/${p.id}`}
                       onClick={close}
                       className="flex items-center gap-3.5 border-b border-line py-3 transition-colors hover:bg-paper-2"
                     >
                       <span className="relative h-[60px] w-12 shrink-0 overflow-hidden bg-paper-2">
-                        <Photo src={p.image} alt="" fill sizes="48px" className="object-cover object-top" />
+                        <Photo src={primaryPhoto(p).src} alt="" fill sizes="48px" className="object-cover object-top" />
                       </span>
                       <span className="min-w-0 flex-1 text-[12px]">{p.name}</span>
                       <span className="text-[11px] font-semibold text-maroon">{formatPrice(p.price)}</span>

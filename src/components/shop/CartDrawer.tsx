@@ -85,19 +85,29 @@ export function CartDrawer() {
             </div>
           ) : (
             <ul>
-              {lines.map(({ product, qty }) => (
-                <li key={product.id} className="grid grid-cols-[75px_1fr_auto] gap-[13px] border-b border-line py-[13px]">
+              {lines.map(({ key, product, variant, size, qty }) => (
+                <li key={key} className="grid grid-cols-[75px_1fr_auto] gap-[13px] border-b border-line py-[13px]">
                   <div className="relative h-[95px] overflow-hidden bg-paper-2">
-                    <Photo src={product.image} alt="" fill sizes="75px" className="object-cover" />
+                    <Photo src={variant.photos[0].src} alt="" fill sizes="75px" className="object-cover object-top" />
                   </div>
                   <div>
-                    <strong className="block text-[12px] font-medium">{product.name}</strong>
-                    <small className="mt-[5px] block text-[10px] text-muted">{categoryLabel(product.category)}</small>
+                    <Link
+                      href={`/products/${product.id}`}
+                      onClick={close}
+                      className="block text-[12px] leading-snug font-medium hover:text-maroon"
+                    >
+                      {product.name}
+                    </Link>
+                    <small className="mt-[5px] block text-[10px] text-muted">
+                      {[product.variants.length > 1 ? variant.label : null, size ? `Size ${size}` : null]
+                        .filter(Boolean)
+                        .join(" · ") || categoryLabel(product.category)}
+                    </small>
                     <div className="mt-2.5 flex items-center gap-3">
                       <button
                         type="button"
                         aria-label={`Decrease quantity of ${product.name}`}
-                        onClick={() => setQty(product.id, qty - 1)}
+                        onClick={() => setQty(key, qty - 1)}
                         className="size-[23px] border border-line"
                       >
                         −
@@ -106,13 +116,13 @@ export function CartDrawer() {
                       <button
                         type="button"
                         aria-label={`Increase quantity of ${product.name}`}
-                        onClick={() => setQty(product.id, qty + 1)}
+                        onClick={() => setQty(key, qty + 1)}
                         className="size-[23px] border border-line"
                       >
                         +
                       </button>
                     </div>
-                    <button type="button" onClick={() => remove(product.id)} className="mt-2 text-[10px] text-muted underline">
+                    <button type="button" onClick={() => remove(key)} className="mt-2 text-[10px] text-muted underline">
                       Remove
                     </button>
                   </div>

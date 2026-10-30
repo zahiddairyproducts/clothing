@@ -1,18 +1,18 @@
 "use client";
 
 import { createContext, useCallback, useContext, useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
-import { getProduct, type Product } from "@/data/products";
-import { cartStore } from "./cart-store";
+import { getProduct, getVariant, type Product, type Variant } from "@/data/products";
+import { cartStore, parseLineKey } from "./cart-store";
 
-export type CartLine = { product: Product; qty: number };
+export type CartLine = { key: string; product: Product; variant: Variant; size?: string; qty: number };
 
 type CartContextValue = {
   lines: CartLine[];
   count: number;
   subtotal: number;
-  add: (id: string) => void;
-  setQty: (id: string, qty: number) => void;
-  remove: (id: string) => void;
+  add: (productId: string, variantId: string, size?: string) => void;
+  setQty: (key: string, qty: number) => void;
+  remove: (key: string) => void;
   isOpen: boolean;
   open: () => void;
   close: () => void;
@@ -32,9 +32,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const lines = useMemo<CartLine[]>(
     () =>
-      Object.entries(bag).flatMap(([id, qty]) => {
-        const product = getProduct(id);
-        return product ? [{ product, qty }] : [];
+      Object.entries(bag).flatMap(([key, qty]) => {
+        const { productId, variantId, size } = parseLineKey(key);
+        const product = getProduct(productId);
+        const variant = product && getVariant(product, variantId);
+        return product && variant ? [{ key, product, variant, size, qty }] : [];
       }),
     [bag],
   );

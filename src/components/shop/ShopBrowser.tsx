@@ -66,7 +66,9 @@ export function ShopBrowser() {
   const searched = useMemo(
     () =>
       term
-        ? products.filter((p) => `${p.name} ${categoryLabel(p.category)}`.toLowerCase().includes(term))
+        ? products.filter((p) =>
+            `${p.name} ${categoryLabel(p.category)} ${p.variants.map((v) => v.label).join(" ")}`.toLowerCase().includes(term),
+          )
         : products,
     [term],
   );

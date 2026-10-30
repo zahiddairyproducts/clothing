@@ -1,14 +1,15 @@
 /**
  * Tiny external store for the shopping bag, consumed with useSyncExternalStore.
- * - Stores only { productId: quantity } so prices always come from the catalogue.
+ * - A bag line is one product + one colour + (for clothing) one size, stored as a key
+ *   "productId~variantId~size" with a quantity. Prices always come from the catalogue.
  * - Persists to localStorage and syncs across tabs.
  * - Hydration-safe: the server snapshot is always an empty bag.
  */
-import { getProduct } from "@/data/products";
+import { getProduct, getVariant } from "@/data/products";
 
 export type BagState = Readonly<Record<string, number>>;
 
-const STORAGE_KEY = "rangeen-dhaage:bag:v1";
+const STORAGE_KEY = "rangeen-dhaage:bag:v2";
 const MAX_QTY = 10;
 const EMPTY: BagState = Object.freeze({});
 
@@ -16,12 +17,28 @@ let state: BagState = EMPTY;
 let loaded = false;
 const listeners = new Set<() => void>();
 
+export function lineKey(productId: string, variantId: string, size?: string): string {
+  return [productId, variantId, size ?? ""].join("~");
+}
+
+export function parseLineKey(key: string) {
+  const [productId = "", variantId = "", size = ""] = key.split("~");
+  return { productId, variantId, size: size || undefined };
+}
+
+function isValidKey(key: string): boolean {
+  const { productId, variantId, size } = parseLineKey(key);
+  const product = getProduct(productId);
+  if (!product || !getVariant(product, variantId)) return false;
+  return product.sizes?.length ? !!size && product.sizes.includes(size) : !size;
+}
+
 function sanitise(input: unknown): BagState {
   if (!input || typeof input !== "object") return EMPTY;
   const next: Record<string, number> = {};
-  for (const [id, qty] of Object.entries(input as Record<string, unknown>)) {
-    if (getProduct(id) && typeof qty === "number" && Number.isInteger(qty) && qty > 0) {
-      next[id] = Math.min(qty, MAX_QTY);
+  for (const [key, qty] of Object.entries(input as Record<string, unknown>)) {
+    if (isValidKey(key) && typeof qty === "number" && Number.isInteger(qty) && qty > 0) {
+      next[key] = Math.min(qty, MAX_QTY);
     }
   }
   return Object.keys(next).length ? next : EMPTY;
@@ -77,18 +94,19 @@ export const cartStore = {
   getServerSnapshot(): BagState {
     return EMPTY;
   },
-  add(id: string) {
-    if (!getProduct(id)) return;
-    commit({ ...state, [id]: Math.min((state[id] ?? 0) + 1, MAX_QTY) });
+  add(productId: string, variantId: string, size?: string) {
+    const key = lineKey(productId, variantId, size);
+    if (!isValidKey(key)) return;
+    commit({ ...state, [key]: Math.min((state[key] ?? 0) + 1, MAX_QTY) });
   },
-  setQty(id: string, qty: number) {
-    if (!getProduct(id)) return;
-    if (qty < 1) return cartStore.remove(id);
-    commit({ ...state, [id]: Math.min(Math.floor(qty), MAX_QTY) });
+  setQty(key: string, qty: number) {
+    if (!isValidKey(key)) return;
+    if (qty < 1) return cartStore.remove(key);
+    commit({ ...state, [key]: Math.min(Math.floor(qty), MAX_QTY) });
   },
-  remove(id: string) {
-    if (!(id in state)) return;
-    const { [id]: _removed, ...rest } = state;
+  remove(key: string) {
+    if (!(key in state)) return;
+    const { [key]: _removed, ...rest } = state;
     void _removed;
     commit(Object.keys(rest).length ? rest : EMPTY);
   },
