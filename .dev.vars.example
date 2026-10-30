@@ -4,6 +4,3 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 # Any endpoint that accepts a JSON POST: { "email": "...", "source": "website" }
 # (Zapier / Make webhook, Mailchimp / Klaviyo proxy, etc.)
 NEWSLETTER_WEBHOOK_URL=
-# Stripe secret key (sk_test_... while testing). Without it /api/checkout answers 503.
-# In production add it as a *secret* in Cloudflare, never as a build variable.
-STRIPE_SECRET_KEY=

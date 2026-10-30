@@ -1,23 +1,26 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 import { Photo } from "@/components/ui/Photo";
 import { Button, ButtonLink } from "@/components/ui/Button";
 import { formatPrice } from "@/lib/format";
 import { orderTotal } from "@/lib/pricing";
+import { buildOrderMessage, newOrderRef, whatsappEnabled, whatsappUrl, type OrderCustomer } from "@/lib/whatsapp";
 import { BagSummary } from "./BagSummary";
 import { useCart } from "./CartProvider";
 import { useHydrated } from "./useHydrated";
 
 const field =
   "w-full border-b border-field bg-transparent px-1 py-3 text-[13px] text-ink outline-none transition-colors placeholder:text-muted/70 focus:border-maroon";
+const UK_POSTCODE = /^[A-Z]{1,2}\d[A-Z\d]?\s?\d[A-Z]{2}$/i;
 const label = "mt-5 block text-[10px] font-semibold tracking-[.14em] text-maroon uppercase";
 
 export function CheckoutForm() {
   const { lines, subtotal } = useCart();
   const hydrated = useHydrated();
-  const [busy, setBusy] = useState(false);
+  const router = useRouter();
   const [error, setError] = useState("");
 
   if (!hydrated) return <div aria-busy="true" className="min-h-[320px]" />;
@@ -32,27 +35,44 @@ export function CheckoutForm() {
     );
   }
 
-  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+  function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    setBusy(true);
-    setError("");
-    try {
-      const res = await fetch("/api/checkout", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({
-          items: lines.map((l) => ({ key: l.key, qty: l.qty })),
-          customer: Object.fromEntries(data.entries()),
-        }),
-      });
-      const body = (await res.json().catch(() => null)) as { url?: string; error?: string } | null;
-      if (!res.ok || !body?.url) throw new Error(body?.error ?? "Something went wrong. Please try again.");
-      window.location.assign(body.url);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
-      setBusy(false);
+    if (!whatsappEnabled) {
+      setError("Ordering on WhatsApp isn't available yet. Please try again soon.");
+      return;
     }
+    const data = Object.fromEntries(new FormData(event.currentTarget).entries());
+    if (typeof data.company === "string" && data.company) return; // honeypot
+    const text = (k: string, max = 120) => (typeof data[k] === "string" ? (data[k] as string).trim().slice(0, max) : "");
+    const customer: OrderCustomer = {
+      name: text("name"),
+      phone: text("phone", 30),
+      email: text("email", 254),
+      line1: text("line1"),
+      line2: text("line2"),
+      city: text("city"),
+      postcode: text("postcode", 10),
+      notes: text("notes", 300),
+    };
+    if (!UK_POSTCODE.test(customer.postcode)) {
+      setError("Please enter a valid UK postcode.");
+      return;
+    }
+    if (customer.phone.replace(/\D/g, "").length < 10) {
+      setError("Please enter a valid phone number.");
+      return;
+    }
+    setError("");
+    const ref = newOrderRef();
+    const url = whatsappUrl(buildOrderMessage(ref, lines, subtotal, customer));
+    try {
+      sessionStorage.setItem("rangeen-dhaage:last-order", JSON.stringify({ ref, url }));
+    } catch {
+      /* the success page simply won't offer a re-send link */
+    }
+    // Opened synchronously from the click so browsers don't block it; the original tab moves on to the thank-you page.
+    window.open(url, "_blank", "noopener");
+    router.push(`/checkout/success?ref=${ref}`);
   }
 
   return (
@@ -60,9 +80,9 @@ export function CheckoutForm() {
       <form onSubmit={onSubmit} className="max-w-[620px]">
         <h2 className="font-serif text-[24px] font-medium">Contact</h2>
         <label className={label} htmlFor="email">
-          Email
+          Email (optional)
         </label>
-        <input id="email" name="email" type="email" required autoComplete="email" className={field} />
+        <input id="email" name="email" type="email" autoComplete="email" className={field} />
         <label className={label} htmlFor="phone">
           Phone (for the courier)
         </label>
@@ -95,6 +115,10 @@ export function CheckoutForm() {
             <input id="postcode" name="postcode" required autoComplete="postal-code" className={`${field} uppercase`} />
           </div>
         </div>
+        <label className={label} htmlFor="notes">
+          Order notes (optional)
+        </label>
+        <textarea id="notes" name="notes" rows={2} className={field} />
         <p className="mt-5 text-[11px] text-muted">We currently deliver to the United Kingdom only.</p>
         {/* Honeypot */}
         <input name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
@@ -102,11 +126,11 @@ export function CheckoutForm() {
         <div role="alert" className="mt-6 min-h-5 text-[12px] text-error">
           {error}
         </div>
-        <Button type="submit" disabled={busy} className="mt-2 w-full disabled:opacity-60">
-          {busy ? "Taking you to secure payment…" : `Pay ${formatPrice(orderTotal(subtotal))}`}
+        <Button type="submit" className="mt-2 w-full">
+          {`Order on WhatsApp · ${formatPrice(orderTotal(subtotal))}`}
         </Button>
         <p className="mt-4 text-[11px] leading-[1.7] text-muted">
-          You will enter your card details on a secure payment page. By continuing you agree to our{" "}
+          Your order opens in WhatsApp ready to send. We will confirm availability and arrange payment with you there. By continuing you agree to our{" "}
           <Link href="/terms" className="underline">
             terms
           </Link>{" "}

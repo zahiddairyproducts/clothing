@@ -15,11 +15,15 @@ const faqs = [
   },
   {
     q: "Is delivery free?",
-    a: `Yes, on UK orders over £${site.freeDeliveryThreshold}. Below that, the delivery fee is shown at checkout before you pay.`,
+    a: `Yes, on UK orders over £${site.freeDeliveryThreshold}. Below that, the delivery fee is shown at checkout before you send your order.`,
   },
   {
     q: "Can I return something?",
     a: `Yes. Unworn items with tags can be returned within ${site.returnWindowDays} days of delivery. See our delivery and returns page for the steps.`,
+  },
+  {
+    q: "How do I place an order?",
+    a: "Add pieces to your bag, go to checkout and enter your delivery details. Your order opens in WhatsApp ready to send; we then confirm availability and arrange payment with you there.",
   },
   {
     q: "How do I find my size?",

@@ -27,7 +27,7 @@ export default function PrivacyPage() {
         <ul>
           <li>Your email address, if you join our mailing list.</li>
           <li>Your name, delivery address, email and phone number when you place an order.</li>
-          <li>Payment details, which are handled by our payment provider and never stored by us.</li>
+          <li>Messages you send us on WhatsApp, including your order details. WhatsApp processes these under its own privacy policy.</li>
           <li>Basic technical data such as browser type, used to keep the site working.</li>
         </ul>
       </Block>
@@ -40,7 +40,7 @@ export default function PrivacyPage() {
       </Block>
       <Block title="Sharing">
         <p>
-          We share data only with services needed to run the store, such as payment, delivery and email providers. We do
+          We share data only with services needed to run the store, such as delivery, messaging and email providers. We do
           not sell your data.
         </p>
       </Block>

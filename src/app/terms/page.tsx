@@ -32,8 +32,9 @@ export default function TermsPage() {
       </Block>
       <Block title="Orders and payment">
         <p>
-          An order is accepted when we send a dispatch confirmation. Payment is taken at checkout through our payment
-          provider. We may cancel an order if an item is unavailable and will refund you in full.
+          Orders are placed by sending your order details to us on WhatsApp. An order is accepted when we confirm it to
+          you there. We will agree how to pay with you before dispatch. We may cancel an order if an item is
+          unavailable and will refund you in full for anything already paid.
         </p>
       </Block>
       <Block title="Delivery and returns">

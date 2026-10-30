@@ -20,7 +20,7 @@ export default function DeliveryReturnsPage() {
       <Block title="Delivery">
         <p>
           We deliver across the United Kingdom. Delivery is complimentary on orders over £{site.freeDeliveryThreshold}.
-          Orders below that amount are charged a delivery fee, shown at checkout before you pay.
+          Orders below that amount are charged a delivery fee, shown at checkout before you send your order.
         </p>
         <p>
           Orders are usually dispatched within 2 to 3 working days, and you will receive an email when yours is on its
