@@ -8,12 +8,16 @@ export const site = {
   locale: "en-GB",
   currency: "GBP",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  /** TODO: replace with your real details; shown on /contact and in the policy pages. */
+  contactEmail: "hello@example.com",
+  contactHours: "Monday to Friday, 10am to 5pm UK time",
+  returnWindowDays: 14,
 } as const;
 
 export const navLinks = [
   { label: "New arrivals", href: "/#new" },
   { label: "Collections", href: "/#collections" },
-  { label: "Our story", href: "/#story" },
+  { label: "Our story", href: "/about" },
 ] as const;
 
 export const footerColumns = [
@@ -30,10 +34,10 @@ export const footerColumns = [
   {
     title: "Need a hand?",
     links: [
-      { label: "Contact us", href: "/#newsletter" },
-      { label: "Delivery & returns", href: "/#newsletter" },
-      { label: "Size guide", href: "/#newsletter" },
-      { label: "FAQs", href: "/#newsletter" },
+      { label: "Contact us", href: "/contact" },
+      { label: "Delivery & returns", href: "/delivery-returns" },
+      { label: "Size guide", href: "/size-guide" },
+      { label: "FAQs", href: "/faqs" },
     ],
   },
   {

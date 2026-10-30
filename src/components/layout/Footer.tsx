@@ -36,7 +36,19 @@ export function Footer() {
           © <CurrentYear /> {site.name}. Made with feeling.
         </span>
         <span>United Kingdom · GBP £</span>
-        <span>Privacy · Terms · Returns</span>
+        <span className="flex gap-2">
+          <Link href="/privacy" className="transition-colors hover:text-maroon">
+            Privacy
+          </Link>
+          ·
+          <Link href="/terms" className="transition-colors hover:text-maroon">
+            Terms
+          </Link>
+          ·
+          <Link href="/delivery-returns" className="transition-colors hover:text-maroon">
+            Returns
+          </Link>
+        </span>
       </div>
     </footer>
   );
