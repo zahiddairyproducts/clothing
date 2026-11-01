@@ -8,6 +8,7 @@ import { NewArrivals } from "@/components/home/NewArrivals";
 import { Newsletter } from "@/components/home/Newsletter";
 import { Story } from "@/components/home/Story";
 import { TrustStrip } from "@/components/home/TrustStrip";
+import { VideoFeature } from "@/components/home/VideoFeature";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -42,6 +43,7 @@ export default function HomePage() {
         <TrustStrip />
         <Collections />
         <NewArrivals />
+        <VideoFeature />
         <Story />
         <Campaign />
         <Newsletter />
