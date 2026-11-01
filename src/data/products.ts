@@ -38,7 +38,7 @@ const JEWELLERY_DETAILS = ["Sold as shown in the photographs"] as const;
 const CLOTHING_DETAILS: readonly string[] = [];
 
 /**
- * Sample catalogue. Names describe what each photo shows; PRICES ARE PLACEHOLDERS.
+ * Sample catalogue. Names describe what each photo shows; Prices and sizes are real for the pieces with measurements listed; the rest are still placeholders.
  * Designs that exist in several colours are one product with several variants.
  * The first four products are the "featured" pieces shown on the home page.
  * Replace this file with a CSV/WooCommerce import when the real catalogue is ready.
@@ -87,12 +87,12 @@ export const products: readonly Product[] = [
   {
     id: "meher-printed-lawn-suit",
     name: "Meher Printed Lawn Suit",
-    price: 59,
+    price: 65,
     category: "lawn",
     tag: "Easy favourite",
     description: "As shown: model in a bright floral printed lawn suit with a matching dupatta.",
-    details: CLOTHING_DETAILS,
-    sizes: WOMENS_SIZES,
+    details: ["Polly lawn 3-piece with printed dupatta", "Size M only: bust 20″, hips 22″, shirt length 48″"],
+    sizes: ["M"],
     variants: [
       {
         id: "default",
@@ -119,25 +119,6 @@ export const products: readonly Product[] = [
         swatch: "#c8bda9",
         photos: [
           { src: "/images/ayla", alt: "Portrait of a model wearing a pearl choker and green drop earrings" },
-        ],
-      },
-    ],
-  },
-  {
-    id: "marigold-lawn-3-piece",
-    name: "Marigold Lawn 3-Piece",
-    price: 65,
-    category: "lawn",
-    description: "As shown: model in an orange printed lawn suit with a patterned dupatta.",
-    details: CLOTHING_DETAILS,
-    sizes: WOMENS_SIZES,
-    variants: [
-      {
-        id: "default",
-        label: "Default",
-        swatch: "#c8bda9",
-        photos: [
-          { src: "/images/lawn", alt: "Model in an orange printed lawn suit with a patterned dupatta" },
         ],
       },
     ],
@@ -183,11 +164,11 @@ export const products: readonly Product[] = [
   {
     id: "indigo-leaf-co-ord-set",
     name: "Indigo Leaf Co-ord Set",
-    price: 55,
+    price: 25,
     category: "lawn",
     description: "As shown: model in a blue floral co-ord set in a warm, plant-filled room.",
-    details: CLOTHING_DETAILS,
-    sizes: WOMENS_SIZES,
+    details: ["Soft lawn 2-piece co-ord set", "Size S only: bust 18″, hips 19″, shirt length 42″"],
+    sizes: ["S"],
     variants: [
       {
         id: "default",
@@ -202,11 +183,11 @@ export const products: readonly Product[] = [
   {
     id: "ruby-embroidered-suit",
     name: "Ruby Embroidered Suit",
-    price: 120,
+    price: 55,
     category: "embroidered",
     description: "As shown: model in a deep pink embroidered suit with a matching dupatta.",
-    details: CLOTHING_DETAILS,
-    sizes: WOMENS_SIZES,
+    details: ["Soft lawn embroidered suit with lawn dupatta", "M: bust 21½″, hips 22″, shirt length 40″", "L: bust 23″, hips 24½″, shirt length 41″"],
+    sizes: ["M", "L"],
     variants: [
       {
         id: "default",
@@ -934,11 +915,11 @@ export const products: readonly Product[] = [
   {
     id: "powder-blue-embroidered-suit",
     name: "Powder Blue Embroidered Suit",
-    price: 128,
+    price: 45,
     category: "embroidered",
     description: "Powder blue embroidered kameez with an organza dupatta. Shown with flared sharara trousers and with straight trousers.",
-    details: CLOTHING_DETAILS,
-    sizes: WOMENS_SIZES,
+    details: ["Embroidered summer suit with net dupatta", "Size L only: bust 22½″, hips 24½″, shirt length 47″"],
+    sizes: ["L"],
     variants: [
       {
         id: "powder-blue",
@@ -948,6 +929,7 @@ export const products: readonly Product[] = [
           { src: "/images/powder-blue-sharara", alt: "Model in a powder blue embroidered kameez with flared sharara trousers and a lace-edged dupatta in a rose garden" },
           { src: "/images/powder-blue-scallop", alt: "Model in a powder blue embroidered suit with a scalloped organza dupatta and a pearl clutch" },
           { src: "/images/powder-blue-garden", alt: "Model in a powder blue embroidered suit with an organza dupatta holding a pearl handbag among roses" },
+          { src: "/images/sky-blue-real", alt: "Sky blue embroidered kameez with sequin work, net dupatta and trousers laid flat on a wooden floor" },
         ],
       },
     ],
@@ -1064,11 +1046,11 @@ export const products: readonly Product[] = [
   {
     id: "black-chiffon-embroidered-3-piece-suit",
     name: "Black Chiffon Embroidered 3-Piece Suit",
-    price: 110,
+    price: 45,
     category: "embroidered",
     description: "As shown: model in a black chiffon embroidered suit with a lace-trimmed dupatta.",
-    details: CLOTHING_DETAILS,
-    sizes: WOMENS_SIZES,
+    details: ["Chiffon 3-piece embroidered suit", "Size S only: bust 18″, hips 19″, shirt length 46″"],
+    sizes: ["S"],
     variants: [
       {
         id: "default",
@@ -1076,6 +1058,7 @@ export const products: readonly Product[] = [
         swatch: "#c8bda9",
         photos: [
           { src: "/images/black-chiffon", alt: "Model in a black chiffon embroidered suit with a lace-trimmed dupatta" },
+          { src: "/images/black-chiffon-real", alt: "Black chiffon embroidered kameez with sequin and lace work, dupatta and trousers laid flat on a wooden floor" },
         ],
       },
     ],
@@ -1083,11 +1066,11 @@ export const products: readonly Product[] = [
   {
     id: "black-organza-suit-printed-trouser",
     name: "Black Organza Embroidered Suit with Printed Trouser",
-    price: 120,
+    price: 65,
     category: "embroidered",
     description: "As shown: model in a black organza embroidered shirt with a printed trouser and chiffon dupatta in a garden.",
-    details: CLOTHING_DETAILS,
-    sizes: WOMENS_SIZES,
+    details: ["Organza embroidered shirt with chiffon dupatta and printed trouser", "Size XL only: bust 24″, hips 25½″, shirt length 49″"],
+    sizes: ["XL"],
     variants: [
       {
         id: "default",
@@ -1095,6 +1078,87 @@ export const products: readonly Product[] = [
         swatch: "#c8bda9",
         photos: [
           { src: "/images/black-organza", alt: "Model in a black organza embroidered shirt with a printed trouser and chiffon dupatta in a garden" },
+          { src: "/images/black-organza-real", alt: "Black organza embroidered shirt with a crane-print navy trouser and chiffon dupatta laid flat on a wooden floor" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "black-cotton-lawn-floral-3-piece",
+    name: "Black Cotton Lawn Floral 3-Piece",
+    price: 35,
+    category: "lawn",
+    tag: "New arrival",
+    description: "Black cotton lawn kameez with bright floral embroidery and cut-work hem, a floral-print dupatta and black trousers.",
+    details: ["Cotton lawn 3-piece suit", "Size M only: bust 20″, hips 21″, shirt length 38″"],
+    sizes: ["M"],
+    variants: [
+      {
+        id: "default",
+        label: "Default",
+        swatch: "#c8bda9",
+        photos: [
+          { src: "/images/black-cotton-embroidered", alt: "Black cotton lawn kameez with pink, orange and lilac floral embroidery, a floral dupatta and black trousers laid flat on a wooden floor" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "white-rose-cross-stitch-lawn-3-piece",
+    name: "White Rose Cross-Stitch Lawn 3-Piece",
+    price: 45,
+    category: "lawn",
+    tag: "New arrival",
+    description: "White cotton lawn kameez with rose cross-stitch embroidery and lace, a teal-and-pink dupatta and white trousers.",
+    details: ["Cotton lawn 3-piece suit", "Size M only: bust 21″, hips 23″, shirt length 46″"],
+    sizes: ["M"],
+    variants: [
+      {
+        id: "default",
+        label: "Default",
+        swatch: "#c8bda9",
+        photos: [
+          { src: "/images/heers-white-cotton", alt: "White cotton lawn kameez with pink and lilac rose cross-stitch embroidery, a teal and pink dupatta and white trousers laid flat on a wooden floor" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "mustard-paisley-viscose-3-piece",
+    name: "Mustard Paisley Viscose 3-Piece",
+    price: 45,
+    category: "embroidered",
+    tag: "New arrival",
+    description: "Mustard viscose kameez with navy paisley embroidery and beaded cuffs, a navy printed dupatta and matching trousers. A warm winter weight.",
+    details: ["Viscose 3-piece suit (winter weight)", "Size M only: bust 20″, hips 21″, shirt length 47″"],
+    sizes: ["M"],
+    variants: [
+      {
+        id: "default",
+        label: "Default",
+        swatch: "#c8bda9",
+        photos: [
+          { src: "/images/orange-viscose-paisley", alt: "Mustard viscose kameez with navy paisley embroidery and beaded cuffs, a navy printed dupatta and mustard trousers laid flat on a wooden floor" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "lilac-cutdana-lawn-3-piece",
+    name: "Lilac Cutdana Lawn 3-Piece",
+    price: 45,
+    category: "embroidered",
+    tag: "New arrival",
+    description: "Lilac cotton lawn kameez with cutdana work, a soft net dupatta with tassels and matching trousers.",
+    details: ["Cotton lawn 3-piece suit with soft net dupatta", "Size M only: bust 20″, hips 22″, shirt length 46″"],
+    sizes: ["M"],
+    variants: [
+      {
+        id: "default",
+        label: "Default",
+        swatch: "#c8bda9",
+        photos: [
+          { src: "/images/lilac-cutdana", alt: "Lilac cotton lawn kameez with gold cutdana embroidery, a soft net dupatta with tassels and trousers laid flat on a wooden floor" },
         ],
       },
     ],

@@ -5,12 +5,6 @@
     960,
     1254
   ],
-  "lawn": [
-    240,
-    480,
-    960,
-    1254
-  ],
   "embroidered": [
     240,
     480,
@@ -548,6 +542,41 @@
     960
   ],
   "ruby-pendant-set": [
+    240,
+    480,
+    960
+  ],
+  "black-cotton-embroidered": [
+    240,
+    480,
+    960
+  ],
+  "heers-white-cotton": [
+    240,
+    480,
+    960
+  ],
+  "orange-viscose-paisley": [
+    240,
+    480,
+    960
+  ],
+  "black-chiffon-real": [
+    240,
+    480,
+    960
+  ],
+  "lilac-cutdana": [
+    240,
+    480,
+    960
+  ],
+  "black-organza-real": [
+    240,
+    480,
+    960
+  ],
+  "sky-blue-real": [
     240,
     480,
     960

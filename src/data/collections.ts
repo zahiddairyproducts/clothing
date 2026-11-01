@@ -16,10 +16,10 @@ export const collections: readonly Collection[] = [
     title: "Lawn edit",
     tagline: "Easy, expressive, everyday",
     cta: "Shop the edit",
-    image: "/images/lawn",
-    alt: "Model in an orange printed lawn suit with a patterned dupatta",
+    image: "/images/meher",
+    alt: "Model in a bright floral printed lawn suit with a matching dupatta",
     href: "/shop?category=lawn",
-    focus: "32% center",
+    focus: "center top",
   },
   {
     slug: "embroidered",
