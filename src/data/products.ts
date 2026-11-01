@@ -973,11 +973,11 @@ export const products: readonly Product[] = [
   {
     id: "mustard-plum-embroidered-sharara-suit",
     name: "Mustard & Plum Embroidered Sharara Suit",
-    price: 168,
+    price: 45,
     category: "embroidered",
     description: "Mustard embroidered kameez with a plum sharara and a matching embroidered dupatta.",
-    details: CLOTHING_DETAILS,
-    sizes: WOMENS_SIZES,
+    details: ["Chiffon 3-piece with heavy gota-style work, plazo trousers and chiffon dupatta", "Size S only: bust 18″, hips 19″, shirt length 43″"],
+    sizes: ["S"],
     variants: [
       {
         id: "mustard",
@@ -986,6 +986,7 @@ export const products: readonly Product[] = [
         photos: [
           { src: "/images/mustard-sharara", alt: "Model seated on a cream sofa in a mustard embroidered kameez with a plum sharara and matching dupatta" },
           { src: "/images/mustard-standing", alt: "Model standing in a mustard embroidered kameez with a plum sharara and a matching embroidered dupatta" },
+          { src: "/images/mustard-gota-real", alt: "Mustard chiffon kameez with gold gota and multicolour border work, a mustard dupatta and aubergine plazo trousers laid flat on a wooden floor" },
         ],
       },
     ],
@@ -1011,26 +1012,28 @@ export const products: readonly Product[] = [
   {
     id: "heavy-work-net-3-piece-suit",
     name: "Heavy Work Net 3-Piece Suit",
-    price: 98,
+    price: 85,
     category: "embroidered",
-    description: "Heavy work net shirt with pearl detail, satin trousers and an organza dupatta. Stitched and ready to wear.",
-    details: ["3-piece stitched suit with organza dupatta", "Ready to wear", "Sizes: Small, Medium, Large"],
+    description: "Shantly net shirt with cutdana work on the front and back, an organza dupatta and straight capri-style trousers.",
+    details: ["Shantly net 3-piece with organza dupatta and straight capri-style trousers", "S: bust 19″, hips 20″, shirt length 48″", "M: bust 20″, hips 22″, shirt length 47″", "L: bust 22″, hips 23″, shirt length 47″"],
     sizes: WOMENS_SIZES,
     variants: [
       {
         id: "ice-blue",
-        label: "Ice Blue",
+        label: "Sky Blue",
         swatch: "#bcd3ee",
         photos: [
           { src: "/images/ice-blue-net", alt: "Model in an ice blue floral net shirt with pearl detail, satin trousers and an organza dupatta" },
+          { src: "/images/sky-net-real", alt: "Sky blue net kameez with cutdana work, an organza dupatta and satin trousers laid flat on a wooden floor" },
         ],
       },
       {
         id: "blush-pink",
-        label: "Blush Pink",
+        label: "Tea Pink",
         swatch: "#f1c9cf",
         photos: [
           { src: "/images/pink-net", alt: "Model in a blush pink floral net shirt with satin trousers and an organza dupatta" },
+          { src: "/images/pink-net-real", alt: "Tea pink net kameez with cutdana work and aqua neckline, an organza dupatta and satin trousers laid flat on a wooden floor" },
         ],
       },
       {
@@ -1039,6 +1042,7 @@ export const products: readonly Product[] = [
         swatch: "#f0de8b",
         photos: [
           { src: "/images/yellow-net", alt: "Model in a butter yellow beaded net shirt with satin trousers and an organza dupatta" },
+          { src: "/images/lemon-net-real", alt: "Pale yellow net kameez with cutdana work and a lilac beaded neckline, an organza dupatta and trousers laid flat on a wooden floor" },
         ],
       },
     ],
@@ -1099,6 +1103,26 @@ export const products: readonly Product[] = [
         swatch: "#c8bda9",
         photos: [
           { src: "/images/black-cotton-embroidered", alt: "Black cotton lawn kameez with pink, orange and lilac floral embroidery, a floral dupatta and black trousers laid flat on a wooden floor" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "pomegranate-print-lawn-3-piece",
+    name: "Pomegranate Print Lawn 3-Piece",
+    price: 45,
+    category: "lawn",
+    tag: "New arrival",
+    description: "White polly lawn kameez with a pomegranate print and maroon lace trim, a matching printed dupatta and white trousers with a print border.",
+    details: ["Polly lawn 3-piece with lace trim and printed dupatta", "Size L only: bust 23″, hips 25″, shirt length 43″"],
+    sizes: ["L"],
+    variants: [
+      {
+        id: "default",
+        label: "Default",
+        swatch: "#c8bda9",
+        photos: [
+          { src: "/images/pomegranate-lawn", alt: "White lawn kameez with a red and pink pomegranate print and maroon trim, a maroon printed dupatta and white trousers laid flat on a wooden floor" },
         ],
       },
     ],
