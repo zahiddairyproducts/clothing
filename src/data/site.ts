@@ -4,7 +4,7 @@ export const site = {
   description:
     "Discover considered colour, beautiful prints and everyday occasionwear at Rangeen Dhaage.",
   announcement: "Free delivery on every order, sent by Royal Mail in 4 to 5 days",
-  /** Delivery is included in the price of every item. */
+  /** Delivery is free on every order (the cost is covered in the item prices). */
   deliveryCarrier: "Royal Mail",
   deliveryTime: "4 to 5 days",
   locale: "en-GB",

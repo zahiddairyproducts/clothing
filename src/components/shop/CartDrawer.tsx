@@ -137,7 +137,7 @@ export function CartDrawer() {
               <strong>{formatPrice(subtotal)}</strong>
             </div>
             <p className="mb-3 text-[10px] leading-[1.6] text-muted">
-              Delivery is included in the price. Your order is sent by Royal Mail and arrives in 4 to 5 days.
+              Free delivery on every order. Sent by Royal Mail, arriving in 4 to 5 days.
             </p>
             <ButtonLink href="/checkout" onClick={close} className="w-full">
               Continue to checkout

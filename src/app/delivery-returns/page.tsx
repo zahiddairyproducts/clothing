@@ -19,8 +19,8 @@ export default function DeliveryReturnsPage() {
     >
       <Block title="Delivery">
         <p>
-          Delivery is included in the price of every item, so there is nothing extra to pay for it. We send your order
-          by Royal Mail, and it usually arrives within 4 to 5 days.
+          Delivery is free on every order. We send your order by Royal Mail, and it usually arrives within 4 to 5
+          days.
         </p>
         <p>
           We currently deliver to UK addresses only. If you would like us to ship elsewhere,{" "}

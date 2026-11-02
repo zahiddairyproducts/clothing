@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "Is delivery free?",
-    a: "Yes. Delivery is included in the price of every item, so there is nothing extra to pay for it.",
+    a: "Yes. Delivery is free on every order, and your order is sent by Royal Mail.",
   },
   {
     q: "Can I return something?",

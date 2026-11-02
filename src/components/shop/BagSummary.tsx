@@ -22,7 +22,7 @@ export function BagSummary({ subtotal }: { subtotal: number }) {
         </div>
       </dl>
       <p className="mt-4 text-[11px] leading-[1.7] text-muted">
-        Delivery is included in the price. Your order is sent by Royal Mail and arrives in 4 to 5 days.
+        Free delivery on every order. Sent by Royal Mail, arriving in 4 to 5 days.
       </p>
     </div>
   );

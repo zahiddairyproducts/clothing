@@ -50,7 +50,7 @@ export const products: readonly Product[] = [
     price: 79,
     category: "lawn",
     tag: "New arrival",
-    description: "As shown: model in a floral three-piece suit with lace detail and a printed dupatta, among ferns.",
+    description: "A floral three-piece suit that brings a garden into your wardrobe. The kameez is finished with delicate lace detail, and the printed dupatta carries the soft colours of the print so the whole outfit feels like one considered picture. A pretty choice for daytime gatherings and family visits.",
     details: CLOTHING_DETAILS,
     sizes: WOMENS_SIZES,
     variants: [
@@ -70,7 +70,7 @@ export const products: readonly Product[] = [
     price: 95,
     category: "embroidered",
     tag: "Bestseller",
-    description: "As shown: model in a black embroidered suit with a floral-print dupatta.",
+    description: "The Noor is a black embroidered suit with a floral-print dupatta, a pairing that gives a classic dark outfit a rich burst of colour. The embroidery gives the kameez depth, while the printed dupatta adds pattern and movement when you drape it. A polished choice for evenings and celebrations when you want black with personality.",
     details: CLOTHING_DETAILS,
     sizes: WOMENS_SIZES,
     variants: [
@@ -90,7 +90,7 @@ export const products: readonly Product[] = [
     price: 65,
     category: "lawn",
     tag: "Easy favourite",
-    description: "A polly lawn suit in a bright floral print, with a matching printed dupatta. It is available in size M only.",
+    description: "A polly lawn suit in a bold, bright floral print, with a matching printed dupatta that completes the look. The colours are lively and expressive, so this is the suit to choose when you want to be noticed for the right reasons. It is available in size M only, with the bust, hips and shirt length listed in the details.",
     details: ["Fabric: polly lawn.", "Size M only. Bust 20″, hips 22″, shirt length 48″."],
     sizes: ["M"],
     variants: [
@@ -110,7 +110,7 @@ export const products: readonly Product[] = [
     price: 89,
     category: "jewellery",
     tag: "Limited edit",
-    description: "As shown: portrait of a model wearing a pearl choker and green drop earrings.",
+    description: "A pearl choker paired with green drop earrings, designed to be worn together as a set. The pearls sit softly at the neckline while the green drops add a bright note of colour. An easy way to finish an embroidered suit for weddings and celebrations.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -128,7 +128,7 @@ export const products: readonly Product[] = [
     name: "Onyx & Pearl Earring Set",
     price: 38,
     category: "jewellery",
-    description: "As shown: black-and-pearl earrings and cuff styled on cream silk.",
+    description: "Black and pearl earrings with a matching cuff, a pairing that is classic and a little dramatic. The black stones keep things sleek and the pearls soften them. Wear the earrings and cuff together for an evening look, or choose just one piece for a quieter finish.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -147,7 +147,7 @@ export const products: readonly Product[] = [
     price: 110,
     category: "embroidered",
     tag: "New arrival",
-    description: "As shown: model seated in a burgundy embroidered suit.",
+    description: "A deep burgundy embroidered suit with a rich, jewel-toned look. Floral embroidery in rose tones gives the kameez depth and detail, and the dark colour suits evening events, celebrations and festive gatherings. Pair it with simple jewellery and let the colour do the work.",
     details: CLOTHING_DETAILS,
     sizes: WOMENS_SIZES,
     variants: [
@@ -166,7 +166,7 @@ export const products: readonly Product[] = [
     name: "Indigo Leaf Co-ord Set",
     price: 25,
     category: "lawn",
-    description: "A soft lawn two-piece co-ord set in a blue and purple leaf print. It is available in size S only.",
+    description: "A soft lawn two-piece co-ord set, with a matching top and trousers in a blue and purple leaf print. The print is lively but easy to wear, and having both pieces together gives you a complete outfit with no styling effort. A relaxed choice for everyday wear, available in size S only.",
     details: ["Fabric: soft lawn, two pieces.", "Size S only. Bust 18″, hips 19″, shirt length 42″."],
     sizes: ["S"],
     variants: [
@@ -185,7 +185,7 @@ export const products: readonly Product[] = [
     name: "Ruby Embroidered Suit",
     price: 55,
     category: "embroidered",
-    description: "A ruby soft lawn suit with embroidery, supplied with a lawn dupatta. It is available in sizes M and L.",
+    description: "A soft lawn suit in a vivid ruby shade with embroidery, supplied with a lawn dupatta. The colour is warm and celebratory, so it suits festive days and family occasions, and the matching dupatta finishes the look. It is available in sizes M and L, with the measurements for each size listed in the details.",
     details: ["Fabric: soft lawn, with a lawn dupatta.", "Size M: bust 21½″, hips 22″, shirt length 40″.", "Size L: bust 23″, hips 24½″, shirt length 41″."],
     sizes: ["M", "L"],
     variants: [
@@ -205,7 +205,7 @@ export const products: readonly Product[] = [
     price: 68,
     category: "jewellery",
     tag: "Bestseller",
-    description: "As shown: turquoise-stone necklace, earrings and tikka set.",
+    description: "A necklace, earrings and tikka in turquoise-coloured stones, sold together as one set. The tikka completes a traditional look, and the turquoise brings a fresh pop of colour against both deep and light outfits. A lovely set for weddings, mehndi and festive occasions.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -223,7 +223,7 @@ export const products: readonly Product[] = [
     name: "Classic Kurta Shalwar",
     price: 52,
     category: "menswear",
-    description: "A classic kurta shalwar with a mandarin collar and button placket.",
+    description: "A classic kurta shalwar with a mandarin collar and a button placket, for a clean, traditional look. It comes in sky blue, cobalt blue and black, so you can choose the shade that suits the occasion. A dependable choice for family gatherings, celebrations and everyday wear.",
     details: CLOTHING_DETAILS,
     sizes: MENS_SIZES,
     variants: [
@@ -258,7 +258,7 @@ export const products: readonly Product[] = [
     name: "Kundan Emerald Earrings",
     price: 52,
     category: "jewellery",
-    description: "As shown: kundan and emerald-stone earrings held in a hand.",
+    description: "Kundan-style earrings with emerald-green stones. The detail is intricate and the green is rich, a combination that works beautifully with bridal and festive colours. Wear them with a simple neckline and let the earrings be the feature.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -276,7 +276,7 @@ export const products: readonly Product[] = [
     name: "Gold Collar Pendant Necklace Set",
     price: 96,
     category: "jewellery",
-    description: "Gold collar necklace with a large stone pendant, pearls and matching earrings.",
+    description: "A gold-toned collar necklace with a large stone pendant and pearls, sold with matching earrings. The collar sits close to the neck and the pendant draws the eye, so it works well with a plain or lightly embroidered neckline. Choose from emerald, onyx or ruby.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -311,7 +311,7 @@ export const products: readonly Product[] = [
     name: "Emerald Chain Necklace Set",
     price: 72,
     category: "jewellery",
-    description: "As shown: layered gold chain necklace with emerald accents and earrings.",
+    description: "A layered gold-toned chain necklace with emerald-green accents, sold with matching earrings. The layers give the necklace presence, and the green accents add colour. A versatile set that can dress up a simple outfit or complete a festive one.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -329,7 +329,7 @@ export const products: readonly Product[] = [
     name: "Ruby & Blush Cocktail Ring",
     price: 28,
     category: "jewellery",
-    description: "As shown: gold cocktail ring with ruby and blush-pink stones.",
+    description: "A gold-toned cocktail ring set with ruby and blush-pink stones. The two colours give it a romantic, celebratory feel, and the stones make it a statement on their own. Wear it with simple bracelets, or let it stand alone against an embroidered suit.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -347,7 +347,7 @@ export const products: readonly Product[] = [
     name: "Plume Statement Earrings",
     price: 48,
     category: "jewellery",
-    description: "Statement drop earrings with a sweeping gold feather, a flower-set baroque pearl and a large faceted stone. Choose your colour.",
+    description: "Statement drop earrings built around a sweeping gold-toned feather, a flower-set baroque pearl and a large faceted stone. They are bold and designed to be noticed, so a simple neckline lets them shine. Choose from navy, teal, mint, blush, pink and silver, black and sapphire blue.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -415,7 +415,7 @@ export const products: readonly Product[] = [
     name: "Charcoal Embellished Jacket Suit",
     price: 185,
     category: "embroidered",
-    description: "A charcoal suit finished with a long sheer jacket, heavily beaded and embroidered.",
+    description: "A charcoal suit finished with a long sheer jacket that is heavily beaded and embroidered. The jacket is the statement: worn open over the suit, it adds length, texture and a touch of sparkle. An elegant choice for evenings and celebrations when you want something a little more dramatic than a standard suit.",
     details: CLOTHING_DETAILS,
     sizes: WOMENS_SIZES,
     variants: [
@@ -436,7 +436,7 @@ export const products: readonly Product[] = [
     name: "Long Gemstone & Pearl Necklace Set",
     price: 92,
     category: "jewellery",
-    description: "Long necklace of jewelled flowers with pearl drops and matching earrings.",
+    description: "A long necklace of jewelled flowers with pearl drops, sold with matching earrings. The length makes it a natural partner for plain or deeply coloured kameez, where the flowers and pearls really stand out. Available in multicolour and turquoise.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -462,7 +462,7 @@ export const products: readonly Product[] = [
     name: "Baroque Pearl Drop Earrings",
     price: 58,
     category: "jewellery",
-    description: "Gold earrings built around a baroque pearl, with jewelled leaves and a round stone drop edged in seed pearls.",
+    description: "Gold-toned earrings built around a baroque pearl, with jewelled leaves and a round stone drop edged with seed pearls. The shapes are organic and the detail is rich, so they feel special without being overwhelming. Choose from emerald, multicolour, ruby, sapphire and amethyst.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -515,7 +515,7 @@ export const products: readonly Product[] = [
     name: "Tiered Pearl Drop Earrings",
     price: 62,
     category: "jewellery",
-    description: "Three-tier drop earrings: a square stone, a baroque pearl in a jewelled setting and a halo-cut stone below.",
+    description: "Three-tier drop earrings with a square stone at the top, a baroque pearl in a jewelled setting in the middle and a halo-cut stone below. The length draws the eye downwards and frames the face. Available in emerald, mint and navy.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -550,7 +550,7 @@ export const products: readonly Product[] = [
     name: "Navy Enamel Floral Earrings",
     price: 56,
     category: "jewellery",
-    description: "Navy enamel and sapphire-crystal floral earrings with a champagne stone and a baroque pearl.",
+    description: "Floral earrings in navy enamel and sapphire-blue crystal, finished with a champagne stone and a baroque pearl. The deep navy makes the champagne and pearl details glow. They suit blue, black, cream and gold outfits.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -570,7 +570,7 @@ export const products: readonly Product[] = [
     name: "Emerald & Pearl Jewelled Earrings",
     price: 58,
     category: "jewellery",
-    description: "As shown: jewelled earrings with a baroque pearl, multicolour crystals and a large oval emerald drop.",
+    description: "Jewelled earrings with a baroque pearl, multicolour crystals and a large oval emerald-green drop. The mix of colours gives them a festive feel, and the emerald drop is the focus. They look especially good against solid-coloured outfits.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -588,7 +588,7 @@ export const products: readonly Product[] = [
     name: "Crystal Petal Jhumka Earrings",
     price: 46,
     category: "jewellery",
-    description: "Jhumka-style earrings with a large oval stone, a fan of crystal petals and a pearl drop.",
+    description: "Jhumka-style earrings with a large oval stone, a fan of crystal petals and a pearl drop. The jhumka shape is a traditional favourite, and the petals add sparkle that moves as you do. Choose from onyx, mint, teal or ruby.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -630,7 +630,7 @@ export const products: readonly Product[] = [
     name: "Rose Quartz Jhumka Earrings",
     price: 46,
     category: "jewellery",
-    description: "As shown: rose-quartz and pink-crystal jhumka earrings with pearl drops in a pink box.",
+    description: "Jhumka earrings in rose-quartz pink, with pink crystals and pearl drops, shown in a pink box. The soft pink is gentle and pretty, and the pearl drops add a delicate finish. A lovely choice for daytime events and pastel outfits.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -648,7 +648,7 @@ export const products: readonly Product[] = [
     name: "Floral Pearl Drop Earrings",
     price: 60,
     category: "jewellery",
-    description: "Crystal floral earrings with a stone post and a baroque pearl drop, shown in a gift box.",
+    description: "Floral earrings set with crystals on a stone post, finished with a baroque pearl drop and shown in a gift box. The flower shape is feminine and the pearl drop adds movement. Choose from champagne or ruby red.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -674,7 +674,7 @@ export const products: readonly Product[] = [
     name: "Pearl Charm Bracelet",
     price: 64,
     category: "jewellery",
-    description: "Gold charm bracelet with pearls, jewelled flowers and a stone cluster.",
+    description: "A gold-toned charm bracelet with pearls, jewelled flowers and a stone cluster. It is detailed enough to be the main piece on your wrist, yet it layers easily with simple bangles. Available in blush and turquoise.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -700,7 +700,7 @@ export const products: readonly Product[] = [
     name: "Braided Statement Bracelet",
     price: 64,
     category: "jewellery",
-    description: "Braided gold bracelet with a jewelled hexagon, a square stone and a baroque pearl charm.",
+    description: "A braided gold-toned bracelet with a jewelled hexagon, a square stone and a baroque pearl charm. The braid gives it texture and the jewelled centre gives it sparkle. Choose from blush, emerald or amethyst.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -735,7 +735,7 @@ export const products: readonly Product[] = [
     name: "Baroque Pearl Cuff Bracelet",
     price: 64,
     category: "jewellery",
-    description: "Twisted gold cuff set with a large baroque pearl and a jewelled stone.",
+    description: "A twisted gold-toned cuff set with a large baroque pearl and a jewelled stone. The twist adds texture and the pearl gives it a soft glow. It looks lovely worn alone or stacked with a second cuff. Available in ruby, amber, rose and moonstone.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -778,7 +778,7 @@ export const products: readonly Product[] = [
     name: "Bead & Pearl Pendant Choker Set",
     price: 98,
     category: "jewellery",
-    description: "Multi-strand faceted bead choker with pearls and a jewelled pendant, shown with matching earrings.",
+    description: "A multi-strand choker of faceted beads and pearls with a jewelled pendant, shown with matching earrings. The strands give it a rich, layered look at the neckline. Available in champagne, black, sage, ruby, blush and navy.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -837,7 +837,7 @@ export const products: readonly Product[] = [
     name: "Pearl Bead Choker Set with Stone Centrepiece",
     price: 102,
     category: "jewellery",
-    description: "Layered pearl and bead choker with an ornate gold stone centrepiece and matching drop earrings.",
+    description: "A layered choker of pearls and beads with an ornate gold-toned stone centrepiece, sold with matching drop earrings. The centrepiece is the focal point, and the layers around it add depth. Choose from blush and emerald, or ruby.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -863,7 +863,7 @@ export const products: readonly Product[] = [
     name: "Embroidered-Placket Kurta Shalwar",
     price: 56,
     category: "menswear",
-    description: "A kurta shalwar with an embroidered collar and placket.",
+    description: "A kurta shalwar with an embroidered collar and placket, a quiet detail that lifts a simple outfit. It comes in charcoal, black and ivory, so there is a shade for daytime and one for evening. Wear it to family gatherings and celebrations when you want to look put together without trying too hard.",
     details: CLOTHING_DETAILS,
     sizes: MENS_SIZES,
     variants: [
@@ -899,7 +899,7 @@ export const products: readonly Product[] = [
     name: "Ruby & Diamanté Cuff Bracelet",
     price: 124,
     category: "jewellery",
-    description: "As shown: wide gold cuff bracelet set with ruby stones and crystal flowers worn on a wrist.",
+    description: "A wide gold-toned cuff set with ruby-red stones and crystal flowers. The width gives it presence on the wrist, and the red stones bring colour. Wear it as the single statement piece with a simple sleeve.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -917,7 +917,7 @@ export const products: readonly Product[] = [
     name: "Powder Blue Embroidered Suit",
     price: 45,
     category: "embroidered",
-    description: "A summer dress in sky blue with embroidery. It is available in size L only.",
+    description: "A sky blue summer dress with embroidery, soft in colour and easy to wear from day into evening. The light shade pairs beautifully with pearl or silver-toned jewellery. It is available in size L only, with the bust, hips and shirt length listed in the details.",
     details: ["Sky blue summer dress.", "Size L only. Bust 22½″, hips 24½″, shirt length 47″."],
     sizes: ["L"],
     variants: [
@@ -938,7 +938,7 @@ export const products: readonly Product[] = [
     name: "Champagne Crystal & Baroque Pearl Chandelier Earrings",
     price: 62,
     category: "jewellery",
-    description: "As shown: antique-gold chandelier earrings with a baroque pearl and champagne crystal on a velvet display stand.",
+    description: "Antique-gold chandelier earrings with a baroque pearl and a champagne crystal, shown on a velvet display stand. The antique finish gives them a vintage, collected feel. They suit gold, cream, ivory and blush outfits.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -956,7 +956,7 @@ export const products: readonly Product[] = [
     name: "Teal & Pearl Choker Set with Tikka",
     price: 118,
     category: "jewellery",
-    description: "As shown: teal-stone and baroque pearl choker with matching earrings and tikka on a linen display bust.",
+    description: "A choker of teal stones and baroque pearls, sold with matching earrings and a tikka. Together they make a complete occasion set, with the deep teal standing out against both bright and soft outfits. Suited to weddings, mehndi and other celebrations.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -974,7 +974,7 @@ export const products: readonly Product[] = [
     name: "Mustard & Plum Embroidered Sharara Suit",
     price: 45,
     category: "embroidered",
-    description: "A mustard chiffon three-piece suit with heavy gota-style work, supplied with plazo trousers and a chiffon dupatta. It is available in size S only.",
+    description: "A mustard chiffon three-piece suit with heavy gota-style work, supplied with plazo trousers and a chiffon dupatta. The warm mustard against the deep plum is a classic festive pairing, and the gold-toned detailing catches the light. A strong choice for celebrations, available in size S only.",
     details: ["Fabric: chiffon, three pieces, with heavy gota-style work.", "Size S only. Bust 18″, hips 19″, shirt length 43″."],
     sizes: ["S"],
     variants: [
@@ -994,7 +994,7 @@ export const products: readonly Product[] = [
     name: "Amethyst & Baroque Pearl Necklace Set",
     price: 112,
     category: "jewellery",
-    description: "As shown: silver-tone necklace with amethyst stones and baroque pearls and matching earrings in a lilac box.",
+    description: "A silver-toned necklace with amethyst-purple stones and baroque pearls, with matching earrings, shown in a lilac box. The purple and pearl combination feels regal and soft at the same time. A good match for lilac, silver, grey, ivory or black outfits.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -1012,7 +1012,7 @@ export const products: readonly Product[] = [
     name: "Heavy Work Net 3-Piece Suit",
     price: 85,
     category: "embroidered",
-    description: "A shantly net shirt with fully heavy cutdana work on the front and back, supplied with an organza dupatta and straight capri-style trousers. It comes in yellow, sky blue and tea pink, in sizes S, M and L at the same price.",
+    description: "A shantly net shirt with fully heavy cutdana work on the front and back, so the detail is carried all the way around the outfit. It comes with an organza dupatta and straight capri-style trousers, in yellow, sky blue or tea pink, all at the same price. Choose it for celebrations when you want delicate colour with rich, sparkling detail. Sizes S, M and L are available.",
     details: ["Fabric: shantly net shirt with an organza dupatta.", "Size S: bust 19″, hips 20″, shirt length 48″.", "Size M: bust 20″, hips 22″, shirt length 47″.", "Size L: bust 22″, hips 23″, shirt length 47″."],
     sizes: WOMENS_SIZES,
     variants: [
@@ -1047,7 +1047,7 @@ export const products: readonly Product[] = [
     name: "Black Chiffon Embroidered 3-Piece Suit",
     price: 45,
     category: "embroidered",
-    description: "A black chiffon three-piece suit with embroidery and sequin detail. It is available in size S only.",
+    description: "A black chiffon three-piece suit with embroidery and sequin detail across the kameez, finished with a lace-trimmed dupatta. Black is always elegant, and the sequins add a quiet shimmer for evenings and celebrations. It is available in size S only.",
     details: ["Fabric: chiffon, three pieces.", "Size S only. Bust 18″, hips 19″, shirt length 46″."],
     sizes: ["S"],
     variants: [
@@ -1066,7 +1066,7 @@ export const products: readonly Product[] = [
     name: "Black Organza Embroidered Suit with Printed Trouser",
     price: 65,
     category: "embroidered",
-    description: "A black embroidered organza shirt, supplied with a chiffon dupatta and a printed trouser. It is available in size XL only.",
+    description: "A black embroidered organza shirt, worn with a printed trouser and a chiffon dupatta. The printed trouser adds a surprise of pattern against the black, so the outfit feels designed rather than simply dressed. It is available in size XL only.",
     details: ["Fabric: organza shirt with a chiffon dupatta.", "Size XL only. Bust 24″, hips 25½″, shirt length 49″."],
     sizes: ["XL"],
     variants: [
@@ -1086,7 +1086,7 @@ export const products: readonly Product[] = [
     price: 85,
     category: "embroidered",
     tag: "New arrival",
-    description: "A plum velvet three-piece suit with embroidery, supplied with an organza dupatta. It is available in size L only.",
+    description: "A plum velvet three-piece suit with embroidery in gold and rose tones, supplied with an organza dupatta. Velvet gives the colour real depth, which makes this a natural choice for winter evenings, weddings and festive gatherings. It is available in size L only.",
     details: ["Fabric: velvet, three pieces, with an organza dupatta.", "Size L only. Bust 21″, hips 23″, shirt length 49″."],
     sizes: ["L"],
     variants: [
@@ -1107,7 +1107,7 @@ export const products: readonly Product[] = [
     name: "Fuchsia & Baroque Pearl Statement Earrings",
     price: 52,
     category: "jewellery",
-    description: "As shown: fuchsia crystal and baroque pearl statement earrings on a rustic wooden table.",
+    description: "Statement earrings with fuchsia crystals and a baroque pearl. The bright pink is bold and joyful, and the pearl keeps it elegant. Wear them with a simple outfit so the colour is the focus.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -1125,7 +1125,7 @@ export const products: readonly Product[] = [
     name: "Floral Spray Drop Earrings",
     price: 58,
     category: "jewellery",
-    description: "Long drop earrings with a stone post, a baroque pearl and a spray of jewelled flowers.",
+    description: "Long drop earrings with a stone post, a baroque pearl and a spray of jewelled flowers. The design flows downwards like a small bouquet. Choose from onyx or sapphire blue.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -1151,7 +1151,7 @@ export const products: readonly Product[] = [
     name: "Amethyst & Baroque Pearl Cluster Earrings",
     price: 46,
     category: "jewellery",
-    description: "Cluster earrings with a baroque pearl, amethyst crystals and a marquise stone.",
+    description: "Cluster earrings with a baroque pearl, amethyst-purple crystals and a marquise-cut stone. The cluster shape gives them volume, and the purple tones are rich. They look lovely with lilac, black and silver outfits.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -1170,7 +1170,7 @@ export const products: readonly Product[] = [
     name: "Purple Crystal Flower & Baroque Pearl Studs",
     price: 42,
     category: "jewellery",
-    description: "As shown: silver-tone stud earrings with a baroque pearl and a purple crystal flower.",
+    description: "Silver-toned stud earrings with a baroque pearl and a purple crystal flower. They are small enough for everyday wear, with a little sparkle and colour. Wear them alone or layered with other earrings.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -1188,7 +1188,7 @@ export const products: readonly Product[] = [
     name: "Flower Stud Earrings",
     price: 38,
     category: "jewellery",
-    description: "Gold stud earrings with a pearl-bordered stone above a crystal flower and a twisted gold curl.",
+    description: "Stud earrings with a pearl-bordered stone above a crystal flower and a twisted curl. A small design with a lot of detail. Choose from ruby, pink and silver, aqua or mint.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
