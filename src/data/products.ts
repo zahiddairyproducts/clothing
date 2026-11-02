@@ -1081,6 +1081,28 @@ export const products: readonly Product[] = [
     ],
   },
   {
+    id: "plum-velvet-embroidered-3-piece",
+    name: "Plum Velvet Embroidered 3-Piece",
+    price: 85,
+    category: "embroidered",
+    tag: "New arrival",
+    description: "Plum velvet kameez with gold and rose-gold floral embroidery and sequin work, an embroidered organza dupatta and matching trousers.",
+    details: ["Velvet 3-piece with organza dupatta", "Size L only: bust 21″, hips 23″, shirt length 49″"],
+    sizes: ["L"],
+    variants: [
+      {
+        id: "plum",
+        label: "Plum",
+        swatch: "#4a1b3a",
+        photos: [
+          { src: "/images/plum-velvet", alt: "Model seated on a gold-framed sofa in a plum velvet embroidered suit with an embroidered organza dupatta" },
+          { src: "/images/plum-velvet-full", alt: "Model standing in a plum velvet embroidered suit with an embroidered organza dupatta and matching trousers" },
+          { src: "/images/plum-velvet-detail", alt: "Close-up of the gold and rose-gold embroidery on the plum velvet kameez" },
+        ],
+      },
+    ],
+  },
+  {
     id: "fuchsia-baroque-pearl-statement-earrings",
     name: "Fuchsia & Baroque Pearl Statement Earrings",
     price: 52,

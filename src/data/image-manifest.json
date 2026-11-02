@@ -545,5 +545,18 @@
     240,
     480,
     960
+  ],
+  "plum-velvet": [
+    240,
+    480,
+    757
+  ],
+  "plum-velvet-full": [
+    240,
+    488
+  ],
+  "plum-velvet-detail": [
+    240,
+    488
   ]
 }
