@@ -929,7 +929,6 @@ export const products: readonly Product[] = [
           { src: "/images/powder-blue-sharara", alt: "Model in a powder blue embroidered kameez with flared sharara trousers and a lace-edged dupatta in a rose garden" },
           { src: "/images/powder-blue-scallop", alt: "Model in a powder blue embroidered suit with a scalloped organza dupatta and a pearl clutch" },
           { src: "/images/powder-blue-garden", alt: "Model in a powder blue embroidered suit with an organza dupatta holding a pearl handbag among roses" },
-          { src: "/images/sky-blue-real", alt: "Sky blue embroidered kameez with sequin work, net dupatta and trousers laid flat on a wooden floor" },
         ],
       },
     ],
@@ -986,7 +985,6 @@ export const products: readonly Product[] = [
         photos: [
           { src: "/images/mustard-sharara", alt: "Model seated on a cream sofa in a mustard embroidered kameez with a plum sharara and matching dupatta" },
           { src: "/images/mustard-standing", alt: "Model standing in a mustard embroidered kameez with a plum sharara and a matching embroidered dupatta" },
-          { src: "/images/mustard-gota-real", alt: "Mustard chiffon kameez with gold gota and multicolour border work, a mustard dupatta and aubergine plazo trousers laid flat on a wooden floor" },
         ],
       },
     ],
@@ -1024,7 +1022,6 @@ export const products: readonly Product[] = [
         swatch: "#bcd3ee",
         photos: [
           { src: "/images/ice-blue-net", alt: "Model in an ice blue floral net shirt with pearl detail, satin trousers and an organza dupatta" },
-          { src: "/images/sky-net-real", alt: "Sky blue net kameez with cutdana work, an organza dupatta and satin trousers laid flat on a wooden floor" },
         ],
       },
       {
@@ -1033,7 +1030,6 @@ export const products: readonly Product[] = [
         swatch: "#f1c9cf",
         photos: [
           { src: "/images/pink-net", alt: "Model in a blush pink floral net shirt with satin trousers and an organza dupatta" },
-          { src: "/images/pink-net-real", alt: "Tea pink net kameez with cutdana work and aqua neckline, an organza dupatta and satin trousers laid flat on a wooden floor" },
         ],
       },
       {
@@ -1042,7 +1038,6 @@ export const products: readonly Product[] = [
         swatch: "#f0de8b",
         photos: [
           { src: "/images/yellow-net", alt: "Model in a butter yellow beaded net shirt with satin trousers and an organza dupatta" },
-          { src: "/images/lemon-net-real", alt: "Pale yellow net kameez with cutdana work and a lilac beaded neckline, an organza dupatta and trousers laid flat on a wooden floor" },
         ],
       },
     ],
@@ -1062,7 +1057,6 @@ export const products: readonly Product[] = [
         swatch: "#c8bda9",
         photos: [
           { src: "/images/black-chiffon", alt: "Model in a black chiffon embroidered suit with a lace-trimmed dupatta" },
-          { src: "/images/black-chiffon-real", alt: "Black chiffon embroidered kameez with sequin and lace work, dupatta and trousers laid flat on a wooden floor" },
         ],
       },
     ],
@@ -1082,107 +1076,6 @@ export const products: readonly Product[] = [
         swatch: "#c8bda9",
         photos: [
           { src: "/images/black-organza", alt: "Model in a black organza embroidered shirt with a printed trouser and chiffon dupatta in a garden" },
-          { src: "/images/black-organza-real", alt: "Black organza embroidered shirt with a crane-print navy trouser and chiffon dupatta laid flat on a wooden floor" },
-        ],
-      },
-    ],
-  },
-  {
-    id: "black-cotton-lawn-floral-3-piece",
-    name: "Black Cotton Lawn Floral 3-Piece",
-    price: 35,
-    category: "lawn",
-    tag: "New arrival",
-    description: "Black cotton lawn kameez with bright floral embroidery and cut-work hem, a floral-print dupatta and black trousers.",
-    details: ["Cotton lawn 3-piece suit", "Size M only: bust 20″, hips 21″, shirt length 38″"],
-    sizes: ["M"],
-    variants: [
-      {
-        id: "default",
-        label: "Default",
-        swatch: "#c8bda9",
-        photos: [
-          { src: "/images/black-cotton-embroidered", alt: "Black cotton lawn kameez with pink, orange and lilac floral embroidery, a floral dupatta and black trousers laid flat on a wooden floor" },
-        ],
-      },
-    ],
-  },
-  {
-    id: "pomegranate-print-lawn-3-piece",
-    name: "Pomegranate Print Lawn 3-Piece",
-    price: 45,
-    category: "lawn",
-    tag: "New arrival",
-    description: "White polly lawn kameez with a pomegranate print and maroon lace trim, a matching printed dupatta and white trousers with a print border.",
-    details: ["Polly lawn 3-piece with lace trim and printed dupatta", "Size L only: bust 23″, hips 25″, shirt length 43″"],
-    sizes: ["L"],
-    variants: [
-      {
-        id: "default",
-        label: "Default",
-        swatch: "#c8bda9",
-        photos: [
-          { src: "/images/pomegranate-lawn", alt: "White lawn kameez with a red and pink pomegranate print and maroon trim, a maroon printed dupatta and white trousers laid flat on a wooden floor" },
-        ],
-      },
-    ],
-  },
-  {
-    id: "white-rose-cross-stitch-lawn-3-piece",
-    name: "White Rose Cross-Stitch Lawn 3-Piece",
-    price: 45,
-    category: "lawn",
-    tag: "New arrival",
-    description: "White cotton lawn kameez with rose cross-stitch embroidery and lace, a teal-and-pink dupatta and white trousers.",
-    details: ["Cotton lawn 3-piece suit", "Size M only: bust 21″, hips 23″, shirt length 46″"],
-    sizes: ["M"],
-    variants: [
-      {
-        id: "default",
-        label: "Default",
-        swatch: "#c8bda9",
-        photos: [
-          { src: "/images/heers-white-cotton", alt: "White cotton lawn kameez with pink and lilac rose cross-stitch embroidery, a teal and pink dupatta and white trousers laid flat on a wooden floor" },
-        ],
-      },
-    ],
-  },
-  {
-    id: "mustard-paisley-viscose-3-piece",
-    name: "Mustard Paisley Viscose 3-Piece",
-    price: 45,
-    category: "embroidered",
-    tag: "New arrival",
-    description: "Mustard viscose kameez with navy paisley embroidery and beaded cuffs, a navy printed dupatta and matching trousers. A warm winter weight.",
-    details: ["Viscose 3-piece suit (winter weight)", "Size M only: bust 20″, hips 21″, shirt length 47″"],
-    sizes: ["M"],
-    variants: [
-      {
-        id: "default",
-        label: "Default",
-        swatch: "#c8bda9",
-        photos: [
-          { src: "/images/orange-viscose-paisley", alt: "Mustard viscose kameez with navy paisley embroidery and beaded cuffs, a navy printed dupatta and mustard trousers laid flat on a wooden floor" },
-        ],
-      },
-    ],
-  },
-  {
-    id: "lilac-cutdana-lawn-3-piece",
-    name: "Lilac Cutdana Lawn 3-Piece",
-    price: 45,
-    category: "embroidered",
-    tag: "New arrival",
-    description: "Lilac cotton lawn kameez with cutdana work, a soft net dupatta with tassels and matching trousers.",
-    details: ["Cotton lawn 3-piece suit with soft net dupatta", "Size M only: bust 20″, hips 22″, shirt length 46″"],
-    sizes: ["M"],
-    variants: [
-      {
-        id: "default",
-        label: "Default",
-        swatch: "#c8bda9",
-        photos: [
-          { src: "/images/lilac-cutdana", alt: "Lilac cotton lawn kameez with gold cutdana embroidery, a soft net dupatta with tassels and trousers laid flat on a wooden floor" },
         ],
       },
     ],
