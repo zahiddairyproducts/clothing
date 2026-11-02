@@ -3,10 +3,10 @@ export const site = {
   tagline: "Threaded with colour",
   description:
     "Discover considered colour, beautiful prints and everyday occasionwear at Rangeen Dhaage.",
-  announcement: "Complimentary UK delivery on orders over £100",
-  freeDeliveryThreshold: 100,
-  /** TODO: confirm your real UK delivery charge for orders under the free-delivery threshold. */
-  deliveryFee: 4.95,
+  announcement: "Free delivery on every order, sent by Royal Mail in 4 to 5 days",
+  /** Delivery is included in the price of every item. */
+  deliveryCarrier: "Royal Mail",
+  deliveryTime: "4 to 5 days",
   locale: "en-GB",
   currency: "GBP",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",

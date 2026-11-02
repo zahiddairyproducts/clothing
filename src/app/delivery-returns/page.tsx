@@ -4,7 +4,7 @@ import { Block, PageCta, PageShell } from "@/components/pages/PageShell";
 
 export const metadata: Metadata = {
   title: "Delivery & returns",
-  description: "UK delivery times, free delivery over £100, and how to return an item.",
+  description: "Free delivery on every order by Royal Mail in 4 to 5 days, and how to return an item.",
   alternates: { canonical: "/delivery-returns" },
 };
 
@@ -19,12 +19,8 @@ export default function DeliveryReturnsPage() {
     >
       <Block title="Delivery">
         <p>
-          We deliver across the United Kingdom. Delivery is complimentary on orders over £{site.freeDeliveryThreshold}.
-          Orders below that amount are charged a delivery fee, shown at checkout before you send your order.
-        </p>
-        <p>
-          Orders are usually dispatched within 2 to 3 working days, and you will receive an email when yours is on its
-          way.
+          Delivery is included in the price of every item, so there is nothing extra to pay for it. We send your order
+          by Royal Mail, and it usually arrives within 4 to 5 days.
         </p>
         <p>
           We currently deliver to UK addresses only. If you would like us to ship elsewhere,{" "}

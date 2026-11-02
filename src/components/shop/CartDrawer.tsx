@@ -4,7 +4,6 @@ import { Photo } from "@/components/ui/Photo";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { categoryLabel } from "@/data/categories";
-import { site } from "@/data/site";
 import { cx } from "@/lib/cx";
 import { formatPrice } from "@/lib/format";
 import { ButtonLink } from "@/components/ui/Button";
@@ -138,8 +137,7 @@ export function CartDrawer() {
               <strong>{formatPrice(subtotal)}</strong>
             </div>
             <p className="mb-3 text-[10px] leading-[1.6] text-muted">
-              Delivery and any applicable taxes are calculated at checkout. Complimentary UK delivery on orders over £
-              {site.freeDeliveryThreshold}.
+              Delivery is included in the price. Your order is sent by Royal Mail and arrives in 4 to 5 days.
             </p>
             <ButtonLink href="/checkout" onClick={close} className="w-full">
               Continue to checkout

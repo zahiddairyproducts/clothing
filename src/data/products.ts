@@ -90,8 +90,8 @@ export const products: readonly Product[] = [
     price: 65,
     category: "lawn",
     tag: "Easy favourite",
-    description: "As shown: model in a bright floral printed lawn suit with a matching dupatta.",
-    details: ["Polly lawn 3-piece with printed dupatta", "Size M only: bust 20″, hips 22″, shirt length 48″"],
+    description: "A polly lawn suit in a bright floral print, with a matching printed dupatta. It is available in size M only.",
+    details: ["Fabric: polly lawn.", "Size M only. Bust 20″, hips 22″, shirt length 48″."],
     sizes: ["M"],
     variants: [
       {
@@ -166,8 +166,8 @@ export const products: readonly Product[] = [
     name: "Indigo Leaf Co-ord Set",
     price: 25,
     category: "lawn",
-    description: "As shown: model in a blue floral co-ord set in a warm, plant-filled room.",
-    details: ["Soft lawn 2-piece co-ord set", "Size S only: bust 18″, hips 19″, shirt length 42″"],
+    description: "A soft lawn two-piece co-ord set in a blue and purple leaf print. It is available in size S only.",
+    details: ["Fabric: soft lawn, two pieces.", "Size S only. Bust 18″, hips 19″, shirt length 42″."],
     sizes: ["S"],
     variants: [
       {
@@ -185,8 +185,8 @@ export const products: readonly Product[] = [
     name: "Ruby Embroidered Suit",
     price: 55,
     category: "embroidered",
-    description: "As shown: model in a deep pink embroidered suit with a matching dupatta.",
-    details: ["Soft lawn embroidered suit with lawn dupatta", "M: bust 21½″, hips 22″, shirt length 40″", "L: bust 23″, hips 24½″, shirt length 41″"],
+    description: "A ruby soft lawn suit with embroidery, supplied with a lawn dupatta. It is available in sizes M and L.",
+    details: ["Fabric: soft lawn, with a lawn dupatta.", "Size M: bust 21½″, hips 22″, shirt length 40″.", "Size L: bust 23″, hips 24½″, shirt length 41″."],
     sizes: ["M", "L"],
     variants: [
       {
@@ -917,8 +917,8 @@ export const products: readonly Product[] = [
     name: "Powder Blue Embroidered Suit",
     price: 45,
     category: "embroidered",
-    description: "Powder blue embroidered kameez with an organza dupatta. Shown with flared sharara trousers and with straight trousers.",
-    details: ["Embroidered summer suit with net dupatta", "Size L only: bust 22½″, hips 24½″, shirt length 47″"],
+    description: "A summer dress in sky blue with embroidery. It is available in size L only.",
+    details: ["Sky blue summer dress.", "Size L only. Bust 22½″, hips 24½″, shirt length 47″."],
     sizes: ["L"],
     variants: [
       {
@@ -974,8 +974,8 @@ export const products: readonly Product[] = [
     name: "Mustard & Plum Embroidered Sharara Suit",
     price: 45,
     category: "embroidered",
-    description: "Mustard embroidered kameez with a plum sharara and a matching embroidered dupatta.",
-    details: ["Chiffon 3-piece with heavy gota-style work, plazo trousers and chiffon dupatta", "Size S only: bust 18″, hips 19″, shirt length 43″"],
+    description: "A mustard chiffon three-piece suit with heavy gota-style work, supplied with plazo trousers and a chiffon dupatta. It is available in size S only.",
+    details: ["Fabric: chiffon, three pieces, with heavy gota-style work.", "Size S only. Bust 18″, hips 19″, shirt length 43″."],
     sizes: ["S"],
     variants: [
       {
@@ -1012,8 +1012,8 @@ export const products: readonly Product[] = [
     name: "Heavy Work Net 3-Piece Suit",
     price: 85,
     category: "embroidered",
-    description: "Shantly net shirt with cutdana work on the front and back, an organza dupatta and straight capri-style trousers.",
-    details: ["Shantly net 3-piece with organza dupatta and straight capri-style trousers", "S: bust 19″, hips 20″, shirt length 48″", "M: bust 20″, hips 22″, shirt length 47″", "L: bust 22″, hips 23″, shirt length 47″"],
+    description: "A shantly net shirt with fully heavy cutdana work on the front and back, supplied with an organza dupatta and straight capri-style trousers. It comes in yellow, sky blue and tea pink, in sizes S, M and L at the same price.",
+    details: ["Fabric: shantly net shirt with an organza dupatta.", "Size S: bust 19″, hips 20″, shirt length 48″.", "Size M: bust 20″, hips 22″, shirt length 47″.", "Size L: bust 22″, hips 23″, shirt length 47″."],
     sizes: WOMENS_SIZES,
     variants: [
       {
@@ -1047,8 +1047,8 @@ export const products: readonly Product[] = [
     name: "Black Chiffon Embroidered 3-Piece Suit",
     price: 45,
     category: "embroidered",
-    description: "As shown: model in a black chiffon embroidered suit with a lace-trimmed dupatta.",
-    details: ["Chiffon 3-piece embroidered suit", "Size S only: bust 18″, hips 19″, shirt length 46″"],
+    description: "A black chiffon three-piece suit with embroidery and sequin detail. It is available in size S only.",
+    details: ["Fabric: chiffon, three pieces.", "Size S only. Bust 18″, hips 19″, shirt length 46″."],
     sizes: ["S"],
     variants: [
       {
@@ -1066,8 +1066,8 @@ export const products: readonly Product[] = [
     name: "Black Organza Embroidered Suit with Printed Trouser",
     price: 65,
     category: "embroidered",
-    description: "As shown: model in a black organza embroidered shirt with a printed trouser and chiffon dupatta in a garden.",
-    details: ["Organza embroidered shirt with chiffon dupatta and printed trouser", "Size XL only: bust 24″, hips 25½″, shirt length 49″"],
+    description: "A black embroidered organza shirt, supplied with a chiffon dupatta and a printed trouser. It is available in size XL only.",
+    details: ["Fabric: organza shirt with a chiffon dupatta.", "Size XL only. Bust 24″, hips 25½″, shirt length 49″."],
     sizes: ["XL"],
     variants: [
       {
@@ -1086,8 +1086,8 @@ export const products: readonly Product[] = [
     price: 85,
     category: "embroidered",
     tag: "New arrival",
-    description: "Plum velvet kameez with gold and rose-gold floral embroidery and sequin work, an embroidered organza dupatta and matching trousers.",
-    details: ["Velvet 3-piece with organza dupatta", "Size L only: bust 21″, hips 23″, shirt length 49″"],
+    description: "A plum velvet three-piece suit with embroidery, supplied with an organza dupatta. It is available in size L only.",
+    details: ["Fabric: velvet, three pieces, with an organza dupatta.", "Size L only. Bust 21″, hips 23″, shirt length 49″."],
     sizes: ["L"],
     variants: [
       {

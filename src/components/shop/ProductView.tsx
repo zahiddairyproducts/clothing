@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { categoryLabel } from "@/data/categories";
 import { getVariant, type Product } from "@/data/products";
-import { site } from "@/data/site";
 import { cx } from "@/lib/cx";
 import { formatPrice } from "@/lib/format";
 import { Button } from "@/components/ui/Button";
@@ -143,7 +142,7 @@ export function ProductView({ product }: { product: Product }) {
           <details className="border-b border-dashed border-maroon/40 py-4">
             <summary className="cursor-pointer text-[10px] tracking-[.16em] uppercase">Delivery</summary>
             <p className="mt-3 text-[12px] leading-[1.7] text-ink-soft">
-              Complimentary UK delivery on orders over £{site.freeDeliveryThreshold}.
+              Delivery is included in the price. Your order is sent by Royal Mail and arrives in 4 to 5 days.
             </p>
           </details>
         </div>

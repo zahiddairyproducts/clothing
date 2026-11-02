@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "How long does delivery take?",
-    a: "Orders are dispatched within 2 to 3 working days. You will get an email as soon as yours is on its way.",
+    a: "Your order is sent by Royal Mail and usually arrives within 4 to 5 days.",
   },
   {
     q: "Is delivery free?",
-    a: `Yes, on UK orders over £${site.freeDeliveryThreshold}. Below that, the delivery fee is shown at checkout before you send your order.`,
+    a: "Yes. Delivery is included in the price of every item, so there is nothing extra to pay for it.",
   },
   {
     q: "Can I return something?",
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "How do I find my size?",
-    a: "Use the size guide for body measurements. If you are between sizes, we suggest sizing up, or message us and we will help.",
+    a: "Every product page lists the bust, hips and shirt length in inches for the sizes available. Compare them with a suit you already own, or see our size guide. If you are unsure, message us and we will help.",
   },
   {
     q: "Are the colours true to the photographs?",

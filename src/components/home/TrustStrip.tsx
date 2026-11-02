@@ -3,7 +3,7 @@ import { ArrowUpRightIcon, AsteriskIcon, DiamondIcon, HeartIcon } from "@/compon
 const items = [
   { icon: AsteriskIcon, label: "Thoughtful prints" },
   { icon: DiamondIcon, label: "Made for your moments" },
-  { icon: ArrowUpRightIcon, label: "UK delivery" },
+  { icon: ArrowUpRightIcon, label: "Free delivery" },
   { icon: HeartIcon, label: "Colour, always" },
 ];
 

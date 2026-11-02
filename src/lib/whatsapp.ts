@@ -24,7 +24,7 @@ export function newOrderRef(): string {
 }
 
 export function buildOrderMessage(ref: string, lines: CartLine[], subtotal: number, c: OrderCustomer): string {
-  const delivery = deliveryCost(subtotal);
+  const delivery = deliveryCost();
   const items = lines.map(({ product, variant, size, qty }, i) => {
     const options = [product.variants.length > 1 ? variant.label : null, size ? `Size ${size}` : null]
       .filter(Boolean)

@@ -3,21 +3,20 @@ import { Block, PageCta, PageShell } from "@/components/pages/PageShell";
 
 export const metadata: Metadata = {
   title: "Size guide",
-  description: "Find your fit: body measurement charts for womenswear and menswear at Rangeen Dhaage.",
+  description:
+    "Bust and hip measurements in inches for the sizes we stock, and how to choose the right size for you.",
   alternates: { canonical: "/size-guide" },
 };
 
-// TODO: replace with the real measurements for your stitched pieces.
+/**
+ * Taken from the measurements listed for the pieces currently in the collection (inches).
+ * Measurements differ a little between designs, so each product page lists its own.
+ */
 const women = [
-  ["S", "34–36", "27–29", "36–38"],
-  ["M", "37–39", "30–32", "39–41"],
-  ["L", "40–42", "33–35", "42–44"],
-];
-const men = [
-  ["S", "36–38", "30–32"],
-  ["M", "39–41", "33–35"],
-  ["L", "42–44", "36–38"],
-  ["XL", "45–47", "39–41"],
+  ["S", "18 to 19½", "19 to 21"],
+  ["M", "20 to 21½", "21 to 23"],
+  ["L", "21 to 23", "23 to 25"],
+  ["XL", "24", "25½"],
 ];
 
 function Table({ head, rows }: { head: string[]; rows: string[][] }) {
@@ -59,25 +58,41 @@ export default function SizeGuidePage() {
       kicker="Need a hand?"
       title="Find your"
       emphasis="fit."
-      intro="All measurements are body measurements in inches. Between sizes? Size up."
+      intro="Every piece is listed with its measurements in inches. Please check the bust, hips and shirt length on the product page before you order."
     >
-      <Block title="How to measure">
-        <ul>
-          <li>Bust or chest: around the fullest part, keeping the tape level.</li>
-          <li>Waist: around your natural waist, the narrowest part of your torso.</li>
-          <li>Hip: around the fullest part of your hips.</li>
-        </ul>
+      <Block title="How to choose your size">
+        <p>
+          The simplest way to choose a size is to measure a suit you already own and like to wear, then compare it with
+          the bust, hips and shirt length listed on the product page of the piece you want.
+        </p>
+        <p>
+          Many of our pieces are available in one size only, and the size is shown on the product page along with its
+          measurements.
+        </p>
       </Block>
-      <Block title="Womenswear">
-        <Table head={["Size", "Bust", "Waist", "Hip"]} rows={women} />
+      <Block title="Womenswear measurements">
+        <p>
+          The table below shows the bust and hip measurements, in inches, of the pieces we currently stock in each size.
+          They vary a little from one design and fabric to another, so the product page always has the exact figures for
+          that piece.
+        </p>
+        <Table head={["Size", "Bust (inches)", "Hips (inches)"]} rows={women} />
+      </Block>
+      <Block title="Shirt length">
+        <p>
+          Shirt length depends on the design, so it is not part of the table. It is listed on each product page in
+          inches.
+        </p>
       </Block>
       <Block title="Menswear">
-        <Table head={["Size", "Chest", "Waist"]} rows={men} />
+        <p>
+          Please contact us with the piece you are interested in and we will confirm its measurements for you.
+        </p>
       </Block>
       <Block title="Still unsure?">
         <p>
-          Send us your measurements and the piece you like via our <a href="/contact">contact page</a> and we will
-          recommend a size.
+          If you have any question about the size of a piece, please get in touch through our{" "}
+          <a href="/contact">contact page</a>.
         </p>
       </Block>
       <PageCta />
