@@ -39,14 +39,7 @@ export function Footer() {
           <span aria-hidden="true" className="hidden tablet:inline">
             ·
           </span>
-          <a
-            href="https://velocedigital.co"
-            target="_blank"
-            rel="noopener"
-            className="underline decoration-maroon/40 underline-offset-[3px] transition-colors hover:text-maroon hover:decoration-maroon"
-          >
-            Designed and built by Veloce Digital
-          </a>
+          <span>Designed and built by Syncsphere Media</span>
         </span>
         <span>United Kingdom · GBP £</span>
         <span className="flex gap-2">
