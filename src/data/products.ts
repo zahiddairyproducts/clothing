@@ -256,9 +256,9 @@ export const products: readonly Product[] = [
   {
     id: "kundan-emerald-earrings",
     name: "Kundan Emerald Earrings",
-    price: 52,
+    price: 15,
     category: "jewellery",
-    description: "Kundan-style earrings with emerald-green stones. The detail is intricate and the green is rich, a combination that works beautifully with bridal and festive colours. Wear them with a simple neckline and let the earrings be the feature.",
+    description: "Gold-plated kundan-style earrings with emerald-green stones and pearl detail. The detail is intricate and the green is rich, a combination that works beautifully with bridal and festive colours. Wear them with a simple neckline and let the earrings be the feature.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -345,9 +345,9 @@ export const products: readonly Product[] = [
   {
     id: "plume-statement-earrings",
     name: "Plume Statement Earrings",
-    price: 48,
+    price: 20,
     category: "jewellery",
-    description: "Statement drop earrings built around a sweeping gold-toned feather, a flower-set baroque pearl and a large faceted stone. They are bold and designed to be noticed, so a simple neckline lets them shine. Choose from navy, teal, mint, blush, pink and silver, black and sapphire blue.",
+    description: "Long gold-plated statement drop earrings built around a sweeping feather, a flower-set baroque pearl and a large faceted stone. They are bold and designed to be noticed, so a simple neckline lets them shine. Choose from navy, teal, mint, blush, pink and silver, black and sapphire blue.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -460,7 +460,7 @@ export const products: readonly Product[] = [
   {
     id: "baroque-pearl-drop-earrings",
     name: "Baroque Pearl Drop Earrings",
-    price: 58,
+    price: 12,
     category: "jewellery",
     description: "Gold-toned earrings built around a baroque pearl, with jewelled leaves and a round stone drop edged with seed pearls. The shapes are organic and the detail is rich, so they feel special without being overwhelming. Choose from emerald, multicolour, ruby, sapphire and amethyst.",
     details: JEWELLERY_DETAILS,
@@ -513,9 +513,9 @@ export const products: readonly Product[] = [
   {
     id: "tiered-pearl-drop-earrings",
     name: "Tiered Pearl Drop Earrings",
-    price: 62,
+    price: 15,
     category: "jewellery",
-    description: "Three-tier drop earrings with a square stone at the top, a baroque pearl in a jewelled setting in the middle and a halo-cut stone below. The length draws the eye downwards and frames the face. Available in emerald, mint and navy.",
+    description: "Gold-plated three-tier drop earrings with a square stone at the top, a baroque pearl in a jewelled setting in the middle and a halo-cut stone below. The length draws the eye downwards and frames the face. Available in emerald, mint and navy.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -586,9 +586,9 @@ export const products: readonly Product[] = [
   {
     id: "crystal-petal-jhumka-earrings",
     name: "Crystal Petal Jhumka Earrings",
-    price: 46,
+    price: 12,
     category: "jewellery",
-    description: "Jhumka-style earrings with a large oval stone, a fan of crystal petals and a pearl drop. The jhumka shape is a traditional favourite, and the petals add sparkle that moves as you do. Choose from onyx, mint, teal or ruby.",
+    description: "Gold-plated jhumka-style earrings with a large oval stone, a fan of crystal petals and a pearl drop. The jhumka shape is a traditional favourite, and the petals add sparkle that moves as you do. Choose from onyx, mint, teal or ruby.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -628,9 +628,9 @@ export const products: readonly Product[] = [
   {
     id: "rose-quartz-jhumka-earrings",
     name: "Rose Quartz Jhumka Earrings",
-    price: 46,
+    price: 20,
     category: "jewellery",
-    description: "Jhumka earrings in rose-quartz pink, with pink crystals and pearl drops, shown in a pink box. The soft pink is gentle and pretty, and the pearl drops add a delicate finish. A lovely choice for daytime events and pastel outfits.",
+    description: "Long gold-plated jhumka earrings in rose-quartz pink, with pink crystals and pearl drops, shown in a pink box. The soft pink is gentle and pretty, and the pearl drops add a delicate finish. A lovely choice for daytime events and pastel outfits.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -936,9 +936,9 @@ export const products: readonly Product[] = [
   {
     id: "champagne-crystal-chandelier-earrings",
     name: "Champagne Crystal & Baroque Pearl Chandelier Earrings",
-    price: 62,
+    price: 15,
     category: "jewellery",
-    description: "Antique-gold chandelier earrings with a baroque pearl and a champagne crystal, shown on a velvet display stand. The antique finish gives them a vintage, collected feel. They suit gold, cream, ivory and blush outfits.",
+    description: "Turkish gold-plated chandelier earrings with a baroque pearl and a champagne crystal. The antique finish gives them a vintage, collected feel. They suit gold, cream, ivory and blush outfits.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -1204,9 +1204,9 @@ export const products: readonly Product[] = [
   {
     id: "floral-spray-drop-earrings",
     name: "Floral Spray Drop Earrings",
-    price: 58,
+    price: 15,
     category: "jewellery",
-    description: "Long drop earrings with a stone post, a baroque pearl and a spray of jewelled flowers. The design flows downwards like a small bouquet. Choose from onyx or sapphire blue.",
+    description: "Long gold-plated drop earrings with a stone post, a baroque pearl and a spray of jewelled flowers. The design flows downwards like a small bouquet. Choose from onyx or sapphire blue.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
@@ -1267,9 +1267,9 @@ export const products: readonly Product[] = [
   {
     id: "flower-stud-earrings",
     name: "Flower Stud Earrings",
-    price: 38,
+    price: 12,
     category: "jewellery",
-    description: "Stud earrings with a pearl-bordered stone above a crystal flower and a twisted curl. A small design with a lot of detail. Choose from ruby, pink and silver, aqua or mint.",
+    description: "Gold-plated stud earrings with a pearl-bordered stone above a crystal flower and a twisted curl. A small design with a lot of detail. Choose from ruby, pink and silver, aqua or mint.",
     details: JEWELLERY_DETAILS,
     variants: [
       {
