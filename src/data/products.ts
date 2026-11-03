@@ -144,12 +144,12 @@ export const products: readonly Product[] = [
   {
     id: "burgundy-rose-embroidered-suit",
     name: "Burgundy Rose Embroidered Suit",
-    price: 110,
+    price: 85,
     category: "embroidered",
     tag: "New arrival",
-    description: "A deep burgundy embroidered suit with a rich, jewel-toned look. Floral embroidery in rose tones gives the kameez depth and detail, and the dark colour suits evening events, celebrations and festive gatherings. Pair it with simple jewellery and let the colour do the work.",
-    details: CLOTHING_DETAILS,
-    sizes: WOMENS_SIZES,
+    description: "A deep burgundy embroidered suit with a rich, jewel-toned look. Floral embroidery in rose tones gives the kameez depth and detail, and the dark colour suits evening events, celebrations and festive gatherings. Pair it with simple jewellery and let the colour do the work. It is available in size S only.",
+    details: ["Size S only."],
+    sizes: ["S"],
     variants: [
       {
         id: "default",
@@ -221,7 +221,7 @@ export const products: readonly Product[] = [
   {
     id: "classic-kurta-shalwar",
     name: "Classic Kurta Shalwar",
-    price: 52,
+    price: 25,
     category: "menswear",
     description: "A classic kurta shalwar with a mandarin collar and a button placket, for a clean, traditional look. It comes in sky blue, cobalt blue and black, so you can choose the shade that suits the occasion. A dependable choice for family gatherings, celebrations and everyday wear.",
     details: CLOTHING_DETAILS,
@@ -413,11 +413,11 @@ export const products: readonly Product[] = [
   {
     id: "charcoal-embellished-jacket-suit",
     name: "Charcoal Embellished Jacket Suit",
-    price: 185,
+    price: 85,
     category: "embroidered",
-    description: "A charcoal suit finished with a long sheer jacket that is heavily beaded and embroidered. The jacket is the statement: worn open over the suit, it adds length, texture and a touch of sparkle. An elegant choice for evenings and celebrations when you want something a little more dramatic than a standard suit.",
-    details: CLOTHING_DETAILS,
-    sizes: WOMENS_SIZES,
+    description: "A charcoal suit finished with a long sheer jacket that is heavily beaded and embroidered. The jacket is the statement: worn open over the suit, it adds length, texture and a touch of sparkle. An elegant choice for evenings and celebrations when you want something a little more dramatic than a standard suit. It is available in size M only.",
+    details: ["Size M only."],
+    sizes: ["M"],
     variants: [
       {
         id: "charcoal",
@@ -861,7 +861,7 @@ export const products: readonly Product[] = [
   {
     id: "embroidered-placket-kurta-shalwar",
     name: "Embroidered-Placket Kurta Shalwar",
-    price: 56,
+    price: 35,
     category: "menswear",
     description: "A kurta shalwar with an embroidered collar and placket, a quiet detail that lifts a simple outfit. It comes in charcoal, black and ivory, so there is a shade for daytime and one for evening. Wear it to family gatherings and celebrations when you want to look put together without trying too hard.",
     details: CLOTHING_DETAILS,
