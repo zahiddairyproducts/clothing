@@ -50,6 +50,16 @@ export function Footer() {
           </Link>
         </span>
       </div>
+      <div className="pt-4 text-center text-[9px] tracking-[.05em] text-muted">
+        <a
+          href="https://velocedigital.co"
+          target="_blank"
+          rel="noopener"
+          className="transition-colors hover:text-maroon"
+        >
+          Designed and built by Veloce Digital
+        </a>
+      </div>
     </footer>
   );
 }
