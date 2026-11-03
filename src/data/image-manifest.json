@@ -558,5 +558,30 @@
   "plum-velvet-detail": [
     240,
     488
+  ],
+  "black-cotton-model": [
+    240,
+    480,
+    960
+  ],
+  "lilac-model": [
+    240,
+    480,
+    960
+  ],
+  "lilac-model-2": [
+    240,
+    480,
+    960
+  ],
+  "viscose-model": [
+    240,
+    480,
+    960
+  ],
+  "pomegranate-model": [
+    240,
+    480,
+    960
   ]
 }

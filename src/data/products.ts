@@ -1103,6 +1103,87 @@ export const products: readonly Product[] = [
     ],
   },
   {
+    id: "black-cotton-lawn-floral-3-piece",
+    name: "Black Cotton Lawn Floral 3-Piece",
+    price: 35,
+    category: "lawn",
+    tag: "New arrival",
+    description: "A black cotton lawn three-piece suit with colourful floral embroidery across the neckline and sleeves. Small cut-work eyelets are scattered over the kameez and the hem is edged in scalloped lace, while the black floral-print dupatta repeats the pinks, oranges and purples of the embroidery. A striking choice when you want black with plenty of colour. It is available in size M only.",
+    details: ["Fabric: cotton lawn, three pieces.", "Size M only. Bust 20″, hips 21″, shirt length 38″."],
+    sizes: ["M"],
+    variants: [
+      {
+        id: "black",
+        label: "Black",
+        swatch: "#1c1c1f",
+        photos: [
+          { src: "/images/black-cotton-model", alt: "Model in a black cotton lawn suit with pink, orange and purple floral embroidery, a floral-print dupatta and wide black trousers" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "lilac-cutdana-lawn-3-piece",
+    name: "Lilac Cutdana Lawn 3-Piece",
+    price: 45,
+    category: "embroidered",
+    tag: "New arrival",
+    description: "A soft lilac cotton lawn suit with cutdana work on the shirt, paired with a soft net dupatta and matching trousers. Gold-toned embroidery follows the neckline and sleeves, the hem is finished with a scalloped net panel, and the dupatta carries a gold border with tassels. A gentle, celebratory choice for daytime events. It is available in size M only.",
+    details: ["Fabric: cotton lawn with cutdana work, with a soft net dupatta.", "Size M only. Bust 20″, hips 22″, shirt length 46″."],
+    sizes: ["M"],
+    variants: [
+      {
+        id: "lilac",
+        label: "Lilac",
+        swatch: "#d9c3cf",
+        photos: [
+          { src: "/images/lilac-model", alt: "Model standing in a garden in a soft lilac embroidered suit with a gold-bordered net dupatta with tassels" },
+          { src: "/images/lilac-model-2", alt: "Model in a soft lilac suit with gold-toned embroidery, a scalloped net hem and a net dupatta" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "mustard-paisley-viscose-3-piece",
+    name: "Mustard Paisley Viscose 3-Piece",
+    price: 45,
+    category: "embroidered",
+    tag: "New arrival",
+    description: "A mustard viscose three-piece suit from the winter collection, with navy paisley embroidery down the front and beaded, scalloped cuffs and hem. The navy dupatta has a printed panel and a scalloped edge that brings out the warm mustard. A rich, seasonal choice for colder days and gatherings. It is available in size M only.",
+    details: ["Fabric: viscose, three pieces (winter).", "Size M only. Bust 20″, hips 21″, shirt length 47″."],
+    sizes: ["M"],
+    variants: [
+      {
+        id: "mustard",
+        label: "Mustard",
+        swatch: "#c78a1d",
+        photos: [
+          { src: "/images/viscose-model", alt: "Model in a mustard viscose suit with navy paisley embroidery, beaded cuffs and a navy printed dupatta with a scalloped edge" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "pomegranate-print-lawn-3-piece",
+    name: "Pomegranate Print Lawn 3-Piece",
+    price: 45,
+    category: "lawn",
+    tag: "New arrival",
+    description: "A polly lawn three-piece suit printed with pomegranates in reds, pinks and greens on a white ground. Maroon trim runs around the neckline and hem and finishes in beaded tassels, and the maroon printed dupatta and white trousers with a printed border complete the set. A cheerful, colourful choice for daytime. It is available in size L only.",
+    details: ["Fabric: polly lawn, three pieces.", "Size L only. Bust 23″, hips 25″, shirt length 43″."],
+    sizes: ["L"],
+    variants: [
+      {
+        id: "white",
+        label: "White",
+        swatch: "#f4efe6",
+        photos: [
+          { src: "/images/pomegranate-model", alt: "Model in a white polly lawn suit printed with red and pink pomegranates, maroon trim, a maroon printed dupatta and white trousers" },
+        ],
+      },
+    ],
+  },
+  {
     id: "fuchsia-baroque-pearl-statement-earrings",
     name: "Fuchsia & Baroque Pearl Statement Earrings",
     price: 52,
