@@ -32,8 +32,21 @@ export function Footer() {
         ))}
       </div>
       <div className="flex flex-col justify-between gap-2 border-t border-maroon/25 pt-[19px] text-[9px] tracking-[.05em] text-muted tablet:flex-row tablet:gap-[15px]">
-        <span>
-          © <CurrentYear /> {site.name}. Made with feeling.
+        <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
+          <span>
+            © <CurrentYear /> {site.name}. Made with feeling.
+          </span>
+          <span aria-hidden="true" className="hidden tablet:inline">
+            ·
+          </span>
+          <a
+            href="https://velocedigital.co"
+            target="_blank"
+            rel="noopener"
+            className="underline decoration-maroon/40 underline-offset-[3px] transition-colors hover:text-maroon hover:decoration-maroon"
+          >
+            Designed and built by Veloce Digital
+          </a>
         </span>
         <span>United Kingdom · GBP £</span>
         <span className="flex gap-2">
@@ -49,16 +62,6 @@ export function Footer() {
             Returns
           </Link>
         </span>
-      </div>
-      <div className="pt-4 text-center text-[9px] tracking-[.05em] text-muted">
-        <a
-          href="https://velocedigital.co"
-          target="_blank"
-          rel="noopener"
-          className="transition-colors hover:text-maroon"
-        >
-          Designed and built by Veloce Digital
-        </a>
       </div>
     </footer>
   );

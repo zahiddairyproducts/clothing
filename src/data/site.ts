@@ -37,6 +37,7 @@ export const footerColumns = [
       { label: "Embroidered", href: "/shop?category=embroidered" },
       { label: "Jewellery", href: "/shop?category=jewellery" },
       { label: "Menswear", href: "/shop?category=menswear" },
+      { label: "Journal", href: "/blog" },
     ],
   },
   {
@@ -51,7 +52,6 @@ export const footerColumns = [
   {
     title: "Stay connected",
     links: [
-      { label: "Journal", href: "/blog" },
       { label: "Instagram", href: "/#newsletter" },
       { label: "Pinterest", href: "/#newsletter" },
       { label: "Join our mailing list", href: "/#newsletter" },
