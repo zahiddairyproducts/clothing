@@ -1228,6 +1228,57 @@ export const products: readonly Product[] = [
     ],
   },
   {
+    id: "turkish-gold-plated-paisley-drop-earrings",
+    name: "Turkish Gold-Plated Paisley Drop Earrings",
+    price: 15,
+    category: "jewellery",
+    tag: "New arrival",
+    description: "Turkish gold-plated drop earrings with a triangular top set with crystals and a pearl, a paisley-shaped drop with a textured stone and a dark enamel edge, and a cluster of gold flowers and filigree below. The mix of cut crystals, pearl and textured metal makes them a statement pair, and the aged gold tone gives them a vintage feel. They come in mint, copper, rose, black and cream, and each colour is a single piece.",
+    details: ["Turkish gold plated.", "Single piece in each colour."],
+    variants: [
+      {
+        id: "mint",
+        label: "Mint",
+        swatch: "#a9d4b4",
+        photos: [
+          { src: "/images/turkish-mint", alt: "Gold-plated drop earrings with a mint-green crystal triangle set with a pearl, a mint paisley drop and gold flowers laid on a white cloth" },
+        ],
+      },
+      {
+        id: "copper",
+        label: "Copper",
+        swatch: "#a8643f",
+        photos: [
+          { src: "/images/turkish-copper", alt: "Gold-plated drop earrings with a copper-brown crystal triangle set with a pearl, a copper paisley drop and gold flowers laid on a white cloth" },
+        ],
+      },
+      {
+        id: "rose",
+        label: "Rose",
+        swatch: "#d58aa0",
+        photos: [
+          { src: "/images/turkish-rose", alt: "Gold-plated drop earrings with a rose-pink crystal triangle set with a pearl, a rose paisley drop and gold flowers laid on a white cloth" },
+        ],
+      },
+      {
+        id: "black",
+        label: "Black",
+        swatch: "#26272b",
+        photos: [
+          { src: "/images/turkish-black", alt: "Gold-plated drop earrings with a black and grey crystal triangle set with a pearl, a dark paisley drop and gold flowers laid on a white cloth" },
+        ],
+      },
+      {
+        id: "cream",
+        label: "Cream",
+        swatch: "#efe2cf",
+        photos: [
+          { src: "/images/turkish-cream", alt: "Gold-plated drop earrings with a cream and blush crystal triangle set with a pearl, a cream paisley drop and gold flowers laid on a white cloth" },
+        ],
+      },
+    ],
+  },
+  {
     id: "amethyst-baroque-pearl-cluster-earrings",
     name: "Amethyst & Baroque Pearl Cluster Earrings",
     price: 46,
