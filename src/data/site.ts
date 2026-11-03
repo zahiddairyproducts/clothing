@@ -24,6 +24,7 @@ export const site = {
 export const navLinks = [
   { label: "New arrivals", href: "/#new" },
   { label: "Collections", href: "/#collections" },
+  { label: "Journal", href: "/blog" },
   { label: "Our story", href: "/about" },
 ] as const;
 
@@ -50,6 +51,7 @@ export const footerColumns = [
   {
     title: "Stay connected",
     links: [
+      { label: "Journal", href: "/blog" },
       { label: "Instagram", href: "/#newsletter" },
       { label: "Pinterest", href: "/#newsletter" },
       { label: "Join our mailing list", href: "/#newsletter" },

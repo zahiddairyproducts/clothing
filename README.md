@@ -38,6 +38,11 @@ Then attach your domain under the Worker's Settings → Domains & Routes.
 3. Product names and prices are sample data (the photos are your own).
 4. Footer help links (Contact, Delivery & returns, Size guide, FAQs, Privacy, Terms) are placeholders and need real pages.
 
+## Writing a blog post
+Posts live in `src/data/blog.ts`. Copy the existing entry in `allPosts`, give it a unique `slug`, title, excerpt, date,
+cover photo and `body` blocks (paragraphs, sub-headings, lists, quotes, images). Set `draft: true` to hide a post while
+you write it. The post appears at `/blog/<slug>`, on the `/blog` index and in the sitemap automatically.
+
 ## Adding or replacing a photo
 1. Export WebP at roughly 240, 480, 960 and 1440 px wide (plus the original width if smaller), named `<name>-<width>.webp`, into `public/images/`.
 2. Add `"<name>": [240, 480, 960, 1440]` to `src/data/image-manifest.json` (the widths you exported).

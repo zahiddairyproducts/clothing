@@ -107,6 +107,7 @@ export function Header() {
           {[
             { label: "Shop all", href: "/shop" },
             { label: "Collections", href: "/#collections" },
+            { label: "Journal", href: "/blog" },
             { label: "Our story", href: "/about" },
             { label: "Wish list", href: "/wishlist" },
             { label: "Join our list", href: "/#newsletter" },

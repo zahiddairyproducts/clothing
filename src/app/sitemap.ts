@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { posts } from "@/data/blog";
 import { products } from "@/data/products";
 import { site } from "@/data/site";
 
@@ -6,6 +7,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: site.url, changeFrequency: "weekly", priority: 1 },
     { url: `${site.url}/shop`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${site.url}/blog`, changeFrequency: "weekly", priority: 0.6 },
+    ...posts.map((p) => ({
+      url: `${site.url}/blog/${p.slug}`,
+      lastModified: p.date,
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
     ...["about", "contact", "delivery-returns", "size-guide", "faqs", "privacy", "terms"].map((path) => ({
       url: `${site.url}/${path}`,
       changeFrequency: "monthly" as const,
