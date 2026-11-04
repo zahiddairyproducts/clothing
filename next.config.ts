@@ -1,13 +1,9 @@
 import type { NextConfig } from "next";
-import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
-
-// Lets `next dev` read Cloudflare bindings / .dev.vars the same way the Worker does.
-initOpenNextCloudflareForDev();
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   // Images are resized by the image CDN itself (see src/lib/image-loader.ts),
-  // so the Worker never has to run an image optimiser.
+  // so the server never has to run an image optimiser.
   images: {
     loader: "custom",
     loaderFile: "./src/lib/image-loader.ts",

@@ -1,7 +1,6 @@
 # Rangeen Dhaage
 
-Next.js (App Router) + Tailwind CSS v4 storefront, deployed to Cloudflare Workers with
-[OpenNext](https://opennext.js.org/cloudflare).
+Next.js (App Router) + Tailwind CSS v4 storefront, deployed on Hostinger as a Node.js web app.
 
 ## Develop
 ```bash
@@ -11,26 +10,23 @@ npm run lint && npm run typecheck
 npm run preview      # build + run in the real Workers runtime locally
 ```
 
-## Deploy (Cloudflare Workers Builds, from GitHub)
-Workers & Pages → Create → Import a repository → this repo, then:
+## Deploy (Hostinger Node.js web app)
 
 | Setting | Value |
 | --- | --- |
-| Build command | `npx opennextjs-cloudflare build` |
-| Deploy command | `npx wrangler deploy` |
-| Variable | `NEXT_PUBLIC_SITE_URL` = `https://your-domain` (set at **build** time) |
-| Variable (build) | `NEXT_PUBLIC_WHATSAPP_NUMBER` = number that receives orders, digits only with country code (e.g. `447123456789`) |
-| Variable (runtime) | `NEWSLETTER_WEBHOOK_URL` = endpoint receiving `{ email, source, subscribedAt }` |
+| Framework | Next.js |
+| Node version | 22.x |
+| Build command | `npm run build` |
+| Start command | `npm start` |
 
-Manual deploy: `npm run deploy` (after `npx wrangler login`).
-Then attach your domain under the Worker's Settings → Domains & Routes.
+Environment variables (set before the first build): `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_WHATSAPP_NUMBER`, `NEWSLETTER_WEBHOOK_URL`. See `.env.example`.
 
 ## Structure
 - `src/data/` – products (each with colour variants, photo galleries and sizes), collections, site copy (edit content here)
 - `src/components/home/` – page sections · `layout/` – header/footer · `shop/` – cart, search, forms
 - `src/app/api/subscribe/route.ts` – newsletter endpoint
 - `public/images/` – your photos, pre-resized to WebP (`<name>-<width>.webp`); `src/data/image-manifest.json` lists the widths available per photo
-- `src/lib/image-loader.ts` – serves those files; swap for Cloudflare Images / R2 if the catalogue grows
+- `src/lib/image-loader.ts` – serves those files
 
 ## Before going live
 1. **Checkout** (`/cart`, `/checkout`) sends the order to WhatsApp as a pre-filled message (`src/lib/whatsapp.ts`). Set `NEXT_PUBLIC_WHATSAPP_NUMBER` at build time; until then checkout says it is unavailable. There is no order database or online payment: payment is agreed in the chat. Confirm `deliveryFee` in `src/data/site.ts`.
