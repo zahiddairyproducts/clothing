@@ -9,13 +9,9 @@ const nextConfig: NextConfig = {
     loaderFile: "./src/lib/image-loader.ts",
     qualities: [75, 85],
   },
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
+  experimental: {
+    webpackBuildWorker: false,
+    cpus: 1,
   },
   async headers() {
     return [
